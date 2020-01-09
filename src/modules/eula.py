@@ -20,6 +20,7 @@
 import gtk
 import os
 import glob
+import re
 
 from firstboot.config import *
 from firstboot.constants import *
@@ -37,7 +38,9 @@ class moduleClass(Module):
         self.sidebarTitle = N_("License Information")
         self.title = N_("License Information")
         self.icon = "workstation.png"
+        self.eula_path = "/usr/share/doc/redhat-release*/EULA"
 
+        
     def apply(self, interface, testing=False):
         if self.okButton.get_active() == True:
             return RESULT_SUCCESS
@@ -73,19 +76,31 @@ class moduleClass(Module):
         textBuffer = gtk.TextBuffer()
         textView = gtk.TextView()
         textView.set_editable(False)
+        textView.set_wrap_mode(gtk.WRAP_WORD)
         textSW = gtk.ScrolledWindow()
         textSW.set_shadow_type(gtk.SHADOW_IN)
         textSW.set_policy(gtk.POLICY_AUTOMATIC, gtk.POLICY_AUTOMATIC)
         textSW.add(textView)
 
-        path = "/usr/share/doc/redhat-release*/EULA"
-        try:
-            license = glob.glob(path)[0]
-        except IndexError:
-            lines = "No license file found in %s\n" % path
-        else:
-            lines = open(license).readlines()
-
+        locale_id = re.split("[._@]", os.environ["LANG"], 1)[0]
+        use_translated_eula = True
+        license_file = None
+        while True:
+            try:
+                lookup_path = self.eula_path
+                if use_translated_eula:
+                    lookup_path += "_%s" % locale_id
+                license_file = glob.glob(lookup_path)[0]
+            except IndexError:
+                if use_translated_eula:
+                    use_translated_eula = False
+                    continue
+                lines = "No license file found in %s\n" % lookup_path
+                break
+            else:
+                lines = open(license_file).readlines()
+                break
+                
         iter = textBuffer.get_iter_at_offset(0)
 
         for line in lines:

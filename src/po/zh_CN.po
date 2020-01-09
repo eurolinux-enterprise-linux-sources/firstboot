@@ -1,0 +1,326 @@
+# translation of zh_CN.po to Wei Liu
+# translation of zh_CN.po to
+# translation of zh_CN.po to
+# translation of zh_CN.po to
+# Simplified Chinese Version of firstboot.
+# Copyright (C) 2002 Red Hat, Inc.
+#
+# Sarah Wang <sarahs@redhat.com>, 2003,2004.
+# Tony Fu <tfu@redhat.com>, 2004, 2006.
+# Leah Liu <weliu@redhat.com>, 2005, 2006.
+# Wu Yu <kiluawuyu@gmail.com>, 2007.
+# Leah Liu <lliu@redhat.com>, 2008, 2009, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: zh_CN\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-05-05 09:32+0200\n"
+"PO-Revision-Date: 2011-05-11 19:27+1000\n"
+"Last-Translator: Leah Liu <lliu@redhat.com>\n"
+"Language-Team: Wei Liu\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../progs/firstboot:140
+msgid "You must be root to run firstboot."
+msgstr "运行 firstboot 时您必须是根用户。"
+
+#: ../progs/firstboot:194 ../progs/firstboot:195
+msgid "No firstboot modules were found."
+msgstr "未发现任何 firstboot 模块。"
+
+#: ../progs/firstboot:205 ../progs/firstboot:206
+msgid "Could not create any firstboot interface."
+msgstr "无法创建任何 firstboot 界面。"
+
+#: ../firstboot/moduleset.py:92
+#, python-format
+msgid "Module %s did not set up its UI; removing."
+msgstr "模块 %s 位设置 UI，删除。"
+
+#: ../firstboot/interface.py:79
+msgid "Attempted to go back, but history is empty."
+msgstr "试图返回，但历史记录为空白。"
+
+#. If we were previously on the last page, we need to set the Next
+#. button's label back to normal.
+#: ../firstboot/interface.py:87 ../firstboot/interface.py:163
+msgid "_Finish"
+msgstr "完成（_F）"
+
+#: ../firstboot/interface.py:184
+msgid "The system must now reboot for some of your selections to take effect."
+msgstr "为了使您做的修改生效，系统需要重新启动。"
+
+#: ../firstboot/interface.py:243
+msgid "_Back"
+msgstr "返回（_B）"
+
+#: ../firstboot/interface.py:250
+msgid "_Forward"
+msgstr "前进（_F）"
+
+#: ../firstboot/interface.py:277
+#, python-format
+msgid "Module %s did not set up its UI, removing."
+msgstr "模块 %s 没有设置其 UI，删除。"
+
+#: ../firstboot/interface.py:347 ../firstboot/interface.py:348
+msgid "moveToPage must be given a module title or page number."
+msgstr "必须为 moveToPage 提供模块标题或者页号。"
+
+#: ../firstboot/interface.py:432
+msgid "Unable to create the screenshot dir; skipping."
+msgstr "无法生成截图目录，跳过。"
+
+#: ../firstboot/interface.py:472 ../firstboot/interface.py:473
+#, python-format
+msgid "No module exists with the title %s."
+msgstr "没有标题为 %s 的模块。"
+
+#: ../firstboot/loader.py:87
+#, python-format
+msgid "Skipping old module %s that has not been updated."
+msgstr "跳过还没有更新的模块 %s。"
+
+#: ../firstboot/loader.py:89 ../firstboot/loader.py:93
+#, python-format
+msgid ""
+"Error loading module %(module)s:\n"
+"%(error)s"
+msgstr ""
+"载入模块 %(module)s 出错：\n"
+"%(error)s"
+
+#: ../firstboot/loader.py:103
+#, python-format
+msgid "Module %s does not contain a class named moduleClass; skipping."
+msgstr "模块 %s 不包含名为 moduleClass 的级别，跳过。"
+
+#: ../firstboot/loader.py:114
+#, python-format
+msgid "Module %(module)s does not contain the required attribute %(attr)s; skipping."
+msgstr "模块 %(module)s 不包含需要的属性 %(attr)s;，跳过。"
+
+#: ../modules/date.py:39 ../modules/date.py:40
+msgid "Date and Time"
+msgstr "日期和时间"
+
+#: ../modules/date.py:61
+msgid "Please set the date and time for the system."
+msgstr "请为系统设置日期和时间。"
+
+#: ../modules/rootpassword.py:47 ../modules/rootpassword.py:48
+msgid "Root Password"
+msgstr "Root 密码"
+
+#: ../modules/rootpassword.py:62
+msgid "The passwords do not match. Please enter the password again."
+msgstr "密码不匹配，请再输入密码。"
+
+#: ../modules/rootpassword.py:78
+msgid ""
+"You can change the root password by filling \n"
+"the following fields. If you leave them empty the password will not be "
+"changed."
+msgstr ""
+"您可以填写以下字段\n"
+"更改 root 密码。如果为空白则不会更改该密码。"
+
+#: ../modules/rootpassword.py:90
+msgid "New Root Password:"
+msgstr "新的 Root 密码："
+
+#: ../modules/rootpassword.py:94
+msgid "Confirm Root Password:"
+msgstr "确认 Root 密码："
+
+#: ../modules/create_user.py:42 ../modules/create_user.py:43
+msgid "Create User"
+msgstr "创建用户"
+
+#: ../modules/create_user.py:95
+msgid ""
+"You did not set up an user account capable of logging into the system.\n"
+"Are you sure you want to continue?"
+msgstr ""
+"您没有设置可登录到该系统的用户帐户。\n"
+"您确定要继续吗？"
+
+#: ../modules/create_user.py:116
+msgid "You must enter and confirm a password for this user."
+msgstr "您必须为这个用户输入并确认密码。"
+
+#: ../modules/create_user.py:123
+msgid "The passwords do not match.  Please enter the password again."
+msgstr "密码错误，请再次输入密码。"
+
+#: ../modules/create_user.py:135
+#, python-format
+msgid ""
+"The username '%s' is a reserved system account.  Please specify another "
+"username."
+msgstr "用户名‘%s’是保留的系统帐户，请指定另一个用户名。"
+
+#: ../modules/create_user.py:154
+#, python-format
+msgid ""
+"A home directory for user %s already exists. Would you like to continue, "
+"making the new user the owner of this directory and all its contents?  Doing "
+"so may take a while to reset permissions and any SELinux labels.  Would you "
+"like to reuse this home directory?  If not, please choose a different "
+"username."
+msgstr ""
+"用户 %s 的主目录已经存在，您是否想要继续，以便使新用户成为这个目录及其所有内"
+"容的拥有者？这样做需要一些时间来重设权限以及所有 SELinux 标签。您要重新使用这"
+"个主目录吗？如果不是，请选择不同的用户名。"
+
+#: ../modules/create_user.py:197
+#, python-format
+msgid "Fixing attributes on the home directory for %s.  This may take a few minutes."
+msgstr "为 %s 修复主目录属性。这需要几分钟时间。"
+
+#: ../modules/create_user.py:217
+#, python-format
+msgid ""
+"Problems were encountered fixing the attributes on some files in the home "
+"directory for %(user)s.  Please refer to %(path)s for which files caused the "
+"errors."
+msgstr "为 %(user)s 修复主目录中的一些文件时遇到问题。请参考 %(path)s 找出造成此错误的文件。"
+
+#: ../modules/create_user.py:237
+msgid ""
+"You must create a 'username' for regular (non-administrative) use of your "
+"system.  To create a system 'username', please provide the information "
+"requested below."
+msgstr ""
+"您必须为您的系统创建一个常规使用的（非管理）‘用户名’。要创建系统‘用户名’，请"
+"提供以下所需信息。"
+
+#: ../modules/create_user.py:257
+msgid "_Username:"
+msgstr "用户名（_U）："
+
+#: ../modules/create_user.py:264
+msgid "Full Nam_e:"
+msgstr "全名（_e）："
+
+#: ../modules/create_user.py:271
+msgid "_Password:"
+msgstr "密码（_P）："
+
+#: ../modules/create_user.py:278
+msgid "Confir_m Password:"
+msgstr "确认密码（_m）："
+
+#: ../modules/create_user.py:287
+msgid ""
+"If you need to use network authentication, such as Kerberos or NIS, please "
+"click the Use Network Login button."
+msgstr "如果您需要使用网络验证，比如 Kerberos 或者 NIS，请点击“使用网络登录”按钮。"
+
+#: ../modules/create_user.py:296
+msgid "Use Network _Login..."
+msgstr "使用网络登录（_L）..."
+
+#: ../modules/create_user.py:304
+msgid ""
+"If you need more control when creating the user (specifying home directory, "
+"and/or UID), please click the Advanced button."
+msgstr "如果您需要在创建该用户时有更多控制［指定主目录和（/或者）UID］，请点击高级按钮。"
+
+#: ../modules/create_user.py:314
+msgid "_Advanced..."
+msgstr "高级......（_A）"
+
+#: ../modules/create_user.py:352
+msgid "Please wait"
+msgstr "请等待"
+
+#: ../modules/additional_cds.py:43 ../modules/additional_cds.py:44
+msgid "Additional CDs"
+msgstr "附加光盘"
+
+#: ../modules/additional_cds.py:55
+msgid ""
+"Please insert the disc labeled \"Red Hat Enterprise Linux Extras\" to allow "
+"for installation of third-party plug-ins and applications.  You may also "
+"insert the Documentation disc, or other Red Hat-provided discs to install "
+"additional software at this time."
+msgstr ""
+"请插入“红帽企业版 Linux 附加光盘”来安装第三方插件和应用程序。此时您还可以插入"
+"文档光盘，或其它由红帽提供的光盘来安装额外的软件。"
+
+#: ../modules/additional_cds.py:61
+msgid "Please insert any additional software install cds at this time."
+msgstr "现在请插入附带的软件安装盘。"
+
+#: ../modules/additional_cds.py:65
+msgid ""
+"\n"
+"\n"
+"To enable runtime support of 32-bit applications on the Intel Itanium2 "
+"architecture you must install the Intel Execution Layer package from the "
+"Extras disc now."
+msgstr ""
+"\n"
+"\n"
+"要使 Intel Itanium2 系统对 32 位应用程序提供运行时的支持，您现在必须从附加光"
+"盘中安装 Intel Execution Layer 软件包。"
+
+#: ../modules/additional_cds.py:73
+msgid "Install..."
+msgstr "安装..."
+
+#: ../modules/additional_cds.py:110
+msgid ""
+"A CD-ROM has not been detected.  Please insert a CD-ROM in the drive and "
+"click \"OK\" to continue."
+msgstr "没有检测到光盘，请在驱动器中插入光盘并点击“确定”继续。"
+
+#: ../modules/additional_cds.py:146
+msgid "The autorun program cannot be found on the CD. Click \"OK\" to continue."
+msgstr "光盘上找不到自动运行程序。请点击“确定”继续。"
+
+#: ../modules/eula.py:37 ../modules/eula.py:38
+msgid "License Information"
+msgstr "许可证信息"
+
+#: ../modules/eula.py:46
+msgid ""
+"Do you want to reread or reconsider the Licence Agreement?  If not, please "
+"shut down the computer and remove this product from your system. "
+msgstr "您是否要重新阅读或者重新考虑许可证协议？如果不是，请关闭计算机并从您的系统中删除这个产品。"
+
+#: ../modules/eula.py:53
+msgid "_Reread license"
+msgstr "重读许可证（_R）"
+
+#: ../modules/eula.py:54
+msgid "_Shut down"
+msgstr "关闭（_S）"
+
+#: ../modules/eula.py:95
+msgid "_Yes, I agree to the License Agreement"
+msgstr "是，我同意该许可证协议（_Y）"
+
+#: ../modules/eula.py:96
+msgid "N_o, I do not agree"
+msgstr "不，我不同意（_o）"
+
+#: ../modules/welcome.py:35 ../modules/welcome.py:36
+msgid "Welcome"
+msgstr "欢迎"
+
+#: ../modules/welcome.py:45
+msgid ""
+"There are a few more steps to take before your system is ready to use.  The "
+"Setup Agent will now guide you through some basic configuration.  Please "
+"click the \"Forward\" button in the lower right corner to continue"
+msgstr ""
+"在您的系统就绪前还要进行几个步骤。设置代理将会引导您进行一些基本配置。请点击"
+"右下角的“前进”按钮继续。"
+

@@ -1,0 +1,342 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Nilamdyuti Goswami <ngoswami@redhat.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: Firstboot\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-05-05 09:32+0200\n"
+"PO-Revision-Date: 2011-05-09 18:02+0000\n"
+"Last-Translator: Nilamdyuti Goswami <ngoswami@redhat.com>\n"
+"Language-Team: as_IN <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: as\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Lokalize 1.0\n"
+
+#: ../progs/firstboot:140
+msgid "You must be root to run firstboot."
+msgstr "firstboot চলাবলৈ আপুনি ৰূট হ'ব লাগিব ।"
+
+#: ../progs/firstboot:194 ../progs/firstboot:195
+msgid "No firstboot modules were found."
+msgstr "কোনো firstboot মডুল পোৱা ন'গ'ল ।"
+
+#: ../progs/firstboot:205 ../progs/firstboot:206
+msgid "Could not create any firstboot interface."
+msgstr "কোনো firstboot আন্তঃপৃষ্ট সৃষ্টি কৰিব নোৱাৰি ।"
+
+#: ../firstboot/moduleset.py:92
+#, python-format
+msgid "Module %s did not set up its UI; removing."
+msgstr "%s অংশই তাৰ UI প্ৰতিষ্ঠা নকৰিলে, আঁতৰুৱা হৈছে ।"
+
+#: ../firstboot/interface.py:79
+msgid "Attempted to go back, but history is empty."
+msgstr "পিছলৈ যাবলৈ চেষ্টা কৰা হৈছিল, কিন্তু ইতিহাস ৰিক্ত ।"
+
+#. If we were previously on the last page, we need to set the Next
+#. button's label back to normal.
+#: ../firstboot/interface.py:87 ../firstboot/interface.py:163
+msgid "_Finish"
+msgstr "সমাপ্তি(_F)"
+
+#: ../firstboot/interface.py:184
+msgid "The system must now reboot for some of your selections to take effect."
+msgstr ""
+"আপোনাৰ কিছু নিৰ্বাচিত বস্তু কাৰ্য্যসিদ্ধি কৰিব'লৈ চিস্টেম পুনৰাম্ভ "
+"কৰিব লাগিব।"
+
+#: ../firstboot/interface.py:243
+msgid "_Back"
+msgstr "পিছলৈ (_B)"
+
+#: ../firstboot/interface.py:250
+msgid "_Forward"
+msgstr "আগলৈ (_F)"
+
+#: ../firstboot/interface.py:277
+#, python-format
+msgid "Module %s did not set up its UI, removing."
+msgstr "%s মডুলে তাৰ UI প্ৰতিষ্ঠা কৰিব নোৱাৰিলে, আঁতৰুৱা হৈছে ।"
+
+#: ../firstboot/interface.py:347 ../firstboot/interface.py:348
+msgid "moveToPage must be given a module title or page number."
+msgstr "moveToPage ক এটা মডুল শীৰ্ষক বা পৃষ্ঠাৰ সংখ্যা দিব লাগিব।"
+
+#: ../firstboot/interface.py:432
+msgid "Unable to create the screenshot dir; skipping."
+msgstr "screenshot dir সৃষ্টি কৰিব নোৱাৰি; বাদ  দিয়া হৈ আছে।"
+
+#: ../firstboot/interface.py:472 ../firstboot/interface.py:473
+#, python-format
+msgid "No module exists with the title %s."
+msgstr "শীৰ্ষক %s এৰে কোনো অংশ নাই।"
+
+#: ../firstboot/loader.py:87
+#, python-format
+msgid "Skipping old module %s that has not been updated."
+msgstr "আপডেইট নকৰা পূৰণি মডুল %s বাদ  দিয়া হৈ আছে ।"
+
+#: ../firstboot/loader.py:89 ../firstboot/loader.py:93
+#, python-format
+msgid ""
+"Error loading module %(module)s:\n"
+"%(error)s"
+msgstr ""
+"মডুল %(module)s লোড কৰোতে ত্ৰুটি:\n"
+"%(error)s"
+
+#: ../firstboot/loader.py:103
+#, python-format
+msgid "Module %s does not contain a class named moduleClass; skipping."
+msgstr "%s অংশত moduleClass নামৰ কোনো ক্লাছ নাই; বাদ দিয়া হৈ আছে।"
+
+#: ../firstboot/loader.py:114
+#, python-format
+msgid ""
+"Module %(module)s does not contain the required attribute %(attr)s; "
+"skipping."
+msgstr ""
+"মডুল %(module)s -ত প্ৰয়োজনীয় বৈশিষ্ট %(attr)s নাই; "
+"বাদ দিয়া হৈ আছে।"
+
+#: ../modules/date.py:39 ../modules/date.py:40
+msgid "Date and Time"
+msgstr "দিন আৰু সময়"
+
+#: ../modules/date.py:61
+msgid "Please set the date and time for the system."
+msgstr "অনুগ্ৰহ কৰি চিস্টেমৰ বাবে দিন আৰু সময় নিৰ্ধাৰণ কৰক।"
+
+#: ../modules/rootpassword.py:47 ../modules/rootpassword.py:48
+msgid "Root Password"
+msgstr "ৰুট পাছওৱাৰ্ড"
+
+#: ../modules/rootpassword.py:62
+msgid "The passwords do not match. Please enter the password again."
+msgstr "পাছওৱাৰ্ড মিল নাখায়। অনুগ্ৰহ কৰি পাছওৱাৰ্ড পুনৰ সোমাওক।"
+
+#: ../modules/rootpassword.py:78
+msgid ""
+"You can change the root password by filling \n"
+"the following fields. If you leave them empty the password will not be changed."
+msgstr ""
+"আপুনি ৰুট পাছওৱাৰ্ডক নিম্নলিখিত ক্ষেত্ৰসমূহ পুৰন কৰি \n"
+"সলনি কৰিব পাৰে। আপুনি যদি ইহতক খালি এৰে তেন্তে পাছওৱাৰ্ড সলনি কৰা নহব।"
+
+#: ../modules/rootpassword.py:90
+msgid "New Root Password:"
+msgstr "নতুন ৰুট পাছওৱাৰ্ড:"
+
+#: ../modules/rootpassword.py:94
+msgid "Confirm Root Password:"
+msgstr "ৰুট পাছওৱাৰ্ড সুনিশ্চিত কৰক:"
+
+#: ../modules/create_user.py:42 ../modules/create_user.py:43
+msgid "Create User"
+msgstr "ব্যৱহাৰককাৰী সৃষ্টি কৰক"
+
+#: ../modules/create_user.py:95
+msgid ""
+"You did not set up an user account capable of logging into the system.\n"
+"Are you sure you want to continue?"
+msgstr ""
+"আপুনি চিস্টেম লগিন কৰিব পৰা ক্ষমতা থকা এটা ব্যৱহাৰকাৰী একাওন্ট সংহতি কৰা নাই।\n"
+"আপুনি নিশ্চিত নে আপুনি চলাই থাকিব বিচাৰে?"
+
+#: ../modules/create_user.py:116
+msgid "You must enter and confirm a password for this user."
+msgstr "অনুগ্ৰহ কৰি এই ব্যৱহাৰকাৰীৰ বাবে পাছওৱাৰ্ড দিয়ক আৰু দৃঢ় কৰক ।"
+
+#: ../modules/create_user.py:123
+msgid "The passwords do not match.  Please enter the password again."
+msgstr "পাছওৱাৰ্ড অমিল । অনুগ্ৰহ কৰি পাছওৱাৰ্ড পুনঃ দিয়ক ।"
+
+#: ../modules/create_user.py:135
+#, python-format
+msgid ""
+"The username '%s' is a reserved system account.  Please specify another "
+"username."
+msgstr ""
+"'%s' ব্যৱহাৰকাৰীৰ নাম চিস্টেমৰ একাওন্টৰ বাবে সংৰক্ষিত । অনুগ্ৰহ কৰি "
+"অন্য এটা ব্যৱহাৰকাৰীৰ নাম দিয়ক ।"
+
+#: ../modules/create_user.py:154
+#, python-format
+msgid ""
+"A home directory for user %s already exists. Would you like to continue, "
+"making the new user the owner of this directory and all its contents?  Doing"
+" so may take a while to reset permissions and any SELinux labels.  Would you"
+" like to reuse this home directory?  If not, please choose a different "
+"username."
+msgstr ""
+"ব্যৱহাৰকাৰী %s ৰ ঘৰৰ ডাইৰেকটৰি ইতিমধ্যে আছে । আপুনি আগবাঢ়িব বিচাৰে নে, যাৰ "
+"ফলত নতুন ব্যৱহাৰকাৰী এই ডাইৰেকটৰি আৰু তাৰ সকলো বিষয়বস্তুৰ গৰাকী হ'ব ? এইটো "
+"কৰিলে, অনুমতি আৰু কোনো SELinux লেবেল পুনঃ স্থাপিত কৰিবলৈ কিছু সময় লাগিবও "
+"পাৰে । আপুনি এই ঘৰৰ ডাইৰেকটৰিকে আকৌ ব্যৱহাৰ কৰিব খোজে নেকি ? ন'হ'লে, অন্য এটা "
+"ব্যৱহাৰকাৰীৰ নাম নিৰ্ব্বাচন কৰক ।"
+
+#: ../modules/create_user.py:197
+#, python-format
+msgid ""
+"Fixing attributes on the home directory for %s.  This may take a few "
+"minutes."
+msgstr "%s ৰ কাৰণে ঘৰৰ ডাইৰেকটৰিৰ বৈশিষ্টসমূহ ঠিক কৰা হৈছে । ইয়াত কিছু সময়ৰ প্ৰয়োজন হ'ব পাৰে ।"
+
+#: ../modules/create_user.py:217
+#, python-format
+msgid ""
+"Problems were encountered fixing the attributes on some files in the home "
+"directory for %(user)s.  Please refer to %(path)s for which files caused the"
+" errors."
+msgstr ""
+"ঘৰ ডাইৰেকটৰিত %(user)s -ৰ বাবে থকা কিছুমান নথিপত্ৰৰ বৈশিষ্টসমূহ ঠিক কৰিব যাওতে "
+"সমস্যা দেখা দিছিল। কোনবোৰ নথিপত্ৰয় ত্ৰুটিসমূহ কৰিছে তাৰ বাবে %(path)s চাওক।"
+
+#: ../modules/create_user.py:237
+msgid ""
+"You must create a 'username' for regular (non-administrative) use of your "
+"system.  To create a system 'username', please provide the information "
+"requested below."
+msgstr ""
+"আপুনি এটা 'ব্যৱহাৰকাৰীৰ নাম' সৃষ্টি কৰাৰ উপদেশ দিয়া হয় চিস্টেমৰ "
+"সাধাৰণ (অপ্ৰশাসনিক) ব্যৱহাৰৰ বাবে । চিস্টেমৰ 'ব্যৱহাৰকাৰীৰ নাম' "
+"সৃষ্টি কৰিবলৈ, তলৰ বিচৰা তথ্য অনুগ্ৰহ কৰি দিয়ক ।"
+
+#: ../modules/create_user.py:257
+msgid "_Username:"
+msgstr "ব্যৱহাৰকাৰীৰ নাম:(_U)"
+
+#: ../modules/create_user.py:264
+msgid "Full Nam_e:"
+msgstr "সম্পূর্ণ নাম: (_e)"
+
+#: ../modules/create_user.py:271
+msgid "_Password:"
+msgstr "পাছওৱাৰ্ড: (_P)"
+
+#: ../modules/create_user.py:278
+msgid "Confir_m Password:"
+msgstr "পাছওৱাৰ্ড সুনিশ্চিত কৰক (_m):"
+
+#: ../modules/create_user.py:287
+msgid ""
+"If you need to use network authentication, such as Kerberos or NIS, please "
+"click the Use Network Login button."
+msgstr ""
+"নে'টৱৰ্কৰ প্ৰমাণীকৰণ ব্যৱহাৰ কৰিব হ'লে, যেনে Kerberos বা NIS, অনুগ্ৰহ কৰি "
+"নে'টৱৰ্ক লগিন ব্যৱহাৰ কৰক বুটাম ক্লিক কৰক।"
+
+#: ../modules/create_user.py:296
+msgid "Use Network _Login..."
+msgstr "নে'টৱৰ্ক লগিন ব্যৱহাৰ কৰক (_L)..."
+
+#: ../modules/create_user.py:304
+msgid ""
+"If you need more control when creating the user (specifying home directory, "
+"and/or UID), please click the Advanced button."
+msgstr ""
+"যদি আপুনি ব্যৱহাৰকাৰী (ঘৰ ডাইৰেকটৰি, আৰু/অথবা UID ধাৰ্য্য কৰাকে) সৃষ্টি কৰোতে অধিক নিয়ন্ত্ৰণ বিচাৰে, "
+"অনুগ্ৰহ কৰি উন্নত বুটাম ক্লিক কৰক।"
+
+#: ../modules/create_user.py:314
+msgid "_Advanced..."
+msgstr "উন্নত (_A)..."
+
+#: ../modules/create_user.py:352
+msgid "Please wait"
+msgstr "অনুগ্ৰহ কৰি অপেক্ষা কৰক"
+
+#: ../modules/additional_cds.py:43 ../modules/additional_cds.py:44
+msgid "Additional CDs"
+msgstr "অতিৰিক্ত CDসমূহ"
+
+#: ../modules/additional_cds.py:55
+msgid ""
+"Please insert the disc labeled \"Red Hat Enterprise Linux Extras\" to allow "
+"for installation of third-party plug-ins and applications.  You may also "
+"insert the Documentation disc, or other Red Hat-provided discs to install "
+"additional software at this time."
+msgstr ""
+"তৃতীয় পক্ষ প্লাগ-ইন্ বা অনুপ্ৰয়োগসমূহ ইনস্টল কৰিব'লৈ \"Red Hat Enterprise "
+"Linux Extras\" নাম থকা ডিষ্ক ভিতৰত সুমাই দিয়ক । আপুনি এই সময়ত অতিৰিক্ত "
+"চফ্টওৱেৰ ইনস্টল কৰিব'লৈ Documentation disc বা অন্য কোনো Red Hat-এ যোগান "
+"ধৰা ডিষ্ক ভিতৰত সুমাই দিব পাৰে ।"
+
+#: ../modules/additional_cds.py:61
+msgid "Please insert any additional software install cds at this time."
+msgstr " অনুগ্ৰহ কৰি এই সময়ত অতিৰিক্ত চফ্টওৱেৰ ইনস্টল cdসমূহ ভিতৰত সুমাই দিয়ক ।"
+
+#: ../modules/additional_cds.py:65
+msgid ""
+"\n"
+"\n"
+"To enable runtime support of 32-bit applications on the Intel Itanium2 architecture you must install the Intel Execution Layer package from the Extras disc now."
+msgstr ""
+"\n"
+"\n"
+"৩২-বিটৰ অনুপ্ৰয়োগ-সমূহ Intel Itanium2 স্থাপত্যত চালনা-সময়ত সামৰ্থবান কৰা সক্ষম কৰিবলৈ Intel Execution Layer-ৰ পেকেইজৰ Extras ডিষ্কৰ পৰা এতিয়া ইনস্টল কৰা আৱশ্যক ।"
+
+#: ../modules/additional_cds.py:73
+msgid "Install..."
+msgstr "ইনস্টল কৰক..."
+
+#: ../modules/additional_cds.py:110
+msgid ""
+"A CD-ROM has not been detected.  Please insert a CD-ROM in the drive and "
+"click \"OK\" to continue."
+msgstr ""
+"কোনো CD-ROM উদ্ঘাটন কৰিব পৰা নাই । CD-ROM এখন চিডি‌-পথত ভৰাওক আৰু আগবাঢ়িব'লৈ"
+" \"ঠিক আছে\" ক্লিক কৰক।"
+
+#: ../modules/additional_cds.py:146
+msgid "The autorun program cannot be found on the CD. Click \"OK\" to continue."
+msgstr " CD‌ -ত autorun কাৰ্য্যক্ৰম পোৱা ন'গ'ল । আগবাঢ়িব'লৈ \"ঠিক আছে\" ক্লিক কৰক।"
+
+#: ../modules/eula.py:37 ../modules/eula.py:38
+msgid "License Information"
+msgstr "অনুজ্ঞা তথ্য"
+
+#: ../modules/eula.py:46
+msgid ""
+"Do you want to reread or reconsider the Licence Agreement?  If not, please "
+"shut down the computer and remove this product from your system. "
+msgstr ""
+"আপুনি অনুজ্ঞা চুক্তিটো পুনৰ পঢ়িব বা ভাবি চাব বিচাৰে নে? যদি নহয়, অনুগ্ৰহ কৰি "
+"কমপিউটাৰ বন্ধ কৰক আৰু এই উৎপাদনক আপোনাৰ চিস্টেমৰ পৰা আতৰাওক।"
+
+#: ../modules/eula.py:53
+msgid "_Reread license"
+msgstr "অনুজ্ঞা পুনৰ পঢ়ক (_R)"
+
+#: ../modules/eula.py:54
+msgid "_Shut down"
+msgstr "বন্ধ কৰক (_S)"
+
+#: ../modules/eula.py:95
+msgid "_Yes, I agree to the License Agreement"
+msgstr "হয়, মই অনুজ্ঞা চুক্তি গ্ৰহন কৰিছো (_Y)"
+
+#: ../modules/eula.py:96
+msgid "N_o, I do not agree"
+msgstr "নহয়, মই গ্ৰহন নকৰো (_o)"
+
+#: ../modules/welcome.py:35 ../modules/welcome.py:36
+msgid "Welcome"
+msgstr "আদৰণি"
+
+#: ../modules/welcome.py:45
+msgid ""
+"There are a few more steps to take before your system is ready to use.  The "
+"Setup Agent will now guide you through some basic configuration.  Please "
+"click the \"Forward\" button in the lower right corner to continue"
+msgstr ""
+"আপোনাৰ চিস্টেমক প্ৰয়োগৰ বাবে সাজু কৰিবলৈ আৰু কিছু পৰ্য্যায় আছে । "
+"কাৰ্য্যপদ্ধতি নিযুক্তকে আপোনাক কিছুমান মূল সংৰূপৰ মাজেৰে পৰিচালনা কৰিব । "
+"অনুগ্ৰহ কৰি আগবাঢ়িব'লৈ তলৰ সোঁ‌-কোণৰ \"আগলৈ\" বুটাম ক্লিক কৰক।"
+
+

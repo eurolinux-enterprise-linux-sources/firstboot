@@ -1,0 +1,344 @@
+# translation of ja.po to Japanese
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Kiyoto Hashida <khashida@redhat.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: ja\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-05-05 09:32+0200\n"
+"PO-Revision-Date: 2011-05-11 11:02+0900\n"
+"Last-Translator: Kiyoto Hashida <khashida@redhat.com>\n"
+"Language-Team: Japanese <jp@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../progs/firstboot:140
+msgid "You must be root to run firstboot."
+msgstr "firstboot を起動するには、root になる必要があります。"
+
+#: ../progs/firstboot:194 ../progs/firstboot:195
+msgid "No firstboot modules were found."
+msgstr "firstboot のモジュールが見つかりませんでした。"
+
+#: ../progs/firstboot:205 ../progs/firstboot:206
+msgid "Could not create any firstboot interface."
+msgstr "firstboot のインターフェースを作成てきません。"
+
+#: ../firstboot/moduleset.py:92
+#, python-format
+msgid "Module %s did not set up its UI; removing."
+msgstr "%s モジュールは、ユーザーインターフェイスが設定されていません: 削除します。"
+
+#: ../firstboot/interface.py:79
+msgid "Attempted to go back, but history is empty."
+msgstr "戻ろうとしましたが、履歴が空です。"
+
+#. If we were previously on the last page, we need to set the Next
+#. button's label back to normal.
+#: ../firstboot/interface.py:87 ../firstboot/interface.py:163
+msgid "_Finish"
+msgstr "終了(_F)"
+
+#: ../firstboot/interface.py:184
+msgid "The system must now reboot for some of your selections to take effect."
+msgstr "いくつかの選択を有効にする為、システムを再起動する必要があります。"
+
+#: ../firstboot/interface.py:243
+msgid "_Back"
+msgstr "戻る(_B)"
+
+#: ../firstboot/interface.py:250
+msgid "_Forward"
+msgstr "進む(_F)"
+
+#: ../firstboot/interface.py:277
+#, python-format
+msgid "Module %s did not set up its UI, removing."
+msgstr ""
+"%s モジュールのユーザーインターフェースがセットアップされていません。削除しま"
+"す。"
+
+#: ../firstboot/interface.py:347 ../firstboot/interface.py:348
+msgid "moveToPage must be given a module title or page number."
+msgstr "ページの移動には、モジュールのタイトルか、ページ番号が必要です。"
+
+#: ../firstboot/interface.py:432
+msgid "Unable to create the screenshot dir; skipping."
+msgstr "スクリーンショット用のディレクトリが作成できません: スキップします。"
+
+#: ../firstboot/interface.py:472 ../firstboot/interface.py:473
+#, python-format
+msgid "No module exists with the title %s."
+msgstr "%s という名前のモジュールは存在しません。"
+
+#: ../firstboot/loader.py:87
+#, python-format
+msgid "Skipping old module %s that has not been updated."
+msgstr "アップデートされていない、古い %s モジュールをスキップします。"
+
+#: ../firstboot/loader.py:89 ../firstboot/loader.py:93
+#, python-format
+msgid ""
+"Error loading module %(module)s:\n"
+"%(error)s"
+msgstr ""
+"モジュール %(module)s をロード中にエラー:\n"
+"%(error)s"
+
+#: ../firstboot/loader.py:103
+#, python-format
+msgid "Module %s does not contain a class named moduleClass; skipping."
+msgstr "%s モジュールは、moduleClass が定義されていません: スキップします。"
+
+#: ../firstboot/loader.py:114
+#, python-format
+msgid "Module %(module)s does not contain the required attribute %(attr)s; skipping."
+msgstr ""
+"モジュール %(module)s は、必要な属性 %(attr)s; を含んでいません。 スキップし"
+"ます。"
+
+#: ../modules/date.py:39 ../modules/date.py:40
+msgid "Date and Time"
+msgstr "日付と時刻"
+
+#: ../modules/date.py:61
+msgid "Please set the date and time for the system."
+msgstr "システム用に日付と時刻を設定してください。"
+
+#: ../modules/rootpassword.py:47 ../modules/rootpassword.py:48
+msgid "Root Password"
+msgstr "Root パスワード"
+
+#: ../modules/rootpassword.py:62
+msgid "The passwords do not match. Please enter the password again."
+msgstr "パスワードが一致しません。パスワードをもう一度入力してください。"
+
+#: ../modules/rootpassword.py:78
+msgid ""
+"You can change the root password by filling \n"
+"the following fields. If you leave them empty the password will not be "
+"changed."
+msgstr ""
+"次のフィールドを充填することで、root パスワードを \n"
+"変更することができます。空のままにした場合には、 "
+"パスワードは変更されません。"
+
+#: ../modules/rootpassword.py:90
+msgid "New Root Password:"
+msgstr "新しい Root パスワード："
+
+#: ../modules/rootpassword.py:94
+msgid "Confirm Root Password:"
+msgstr "Root パスワードの確認："
+
+#: ../modules/create_user.py:42 ../modules/create_user.py:43
+msgid "Create User"
+msgstr "ユーザーの作成"
+
+#: ../modules/create_user.py:95
+msgid ""
+"You did not set up an user account capable of logging into the system.\n"
+"Are you sure you want to continue?"
+msgstr ""
+"システムにログインできるユーザーアカウントを設定していません。\n"
+"このまま継続してもよろしいですか？"
+
+#: ../modules/create_user.py:116
+msgid "You must enter and confirm a password for this user."
+msgstr "このユーザー用にパスワードを作成して確定する必要があります。"
+
+#: ../modules/create_user.py:123
+msgid "The passwords do not match.  Please enter the password again."
+msgstr "パスワードが一致していません。もう一度入力してください。"
+
+#: ../modules/create_user.py:135
+#, python-format
+msgid ""
+"The username '%s' is a reserved system account.  Please specify another "
+"username."
+msgstr ""
+"ユーザー名 '%s' はシステムアカウントとして既に使用されています。他のユーザー"
+"名を指定してください。"
+
+#: ../modules/create_user.py:154
+#, python-format
+msgid ""
+"A home directory for user %s already exists. Would you like to continue, "
+"making the new user the owner of this directory and all its contents?  Doing "
+"so may take a while to reset permissions and any SELinux labels.  Would you "
+"like to reuse this home directory?  If not, please choose a different "
+"username."
+msgstr ""
+"ユーザー '%s' のホームディレクトリは既に存在します。継続して新しいユーザーを "
+"このディレクトリとそのコンテンツのオーナーにしますか？ これを実行するには、 "
+"権限と SELinux ラベルのリセットのために少し時間がかかります。このホーム ディ"
+"レクトリを再利用しますか？ そうでなければ、別のユーザー名を選択して 下さい。"
+
+#: ../modules/create_user.py:197
+#, python-format
+msgid "Fixing attributes on the home directory for %s.  This may take a few minutes."
+msgstr "%s のホームディレクトリ上の属性を修復しています。これには数分かかります。"
+
+#: ../modules/create_user.py:217
+#, python-format
+msgid ""
+"Problems were encountered fixing the attributes on some files in the home "
+"directory for %(user)s.  Please refer to %(path)s for which files caused the "
+"errors."
+msgstr ""
+"%(user)s 用のホームディレクトリ内にある一部のファイルの属性修復中に問題が発生"
+"しました。どのファイルがエラーを起こしたかを見るには %(path)s を参照してくだ"
+"さい。"
+
+#: ../modules/create_user.py:237
+msgid ""
+"You must create a 'username' for regular (non-administrative) use of your "
+"system.  To create a system 'username', please provide the information "
+"requested below."
+msgstr ""
+"システムでの(管理用途ではない)普通の作業のために、'ユーザー'を作成することを "
+"推奨します。以下の情報を入力し、システムに 'ユーザー' を作成します。"
+
+#: ../modules/create_user.py:257
+msgid "_Username:"
+msgstr "ユーザー名 (_U):"
+
+#: ../modules/create_user.py:264
+msgid "Full Nam_e:"
+msgstr "フルネーム (_E):"
+
+#: ../modules/create_user.py:271
+msgid "_Password:"
+msgstr "パスワード (_P):"
+
+#: ../modules/create_user.py:278
+msgid "Confir_m Password:"
+msgstr "パスワードの確認 (_C):"
+
+#: ../modules/create_user.py:287
+msgid ""
+"If you need to use network authentication, such as Kerberos or NIS, please "
+"click the Use Network Login button."
+msgstr ""
+"もしも Kerberos や NIS のようなネットワーク認証が必要な場合、\"ネットワークロ"
+"グインを使用する\" をクリックしてください。"
+
+#: ../modules/create_user.py:296
+msgid "Use Network _Login..."
+msgstr "ネットワークログインを使用する (_L)"
+
+#: ../modules/create_user.py:304
+msgid ""
+"If you need more control when creating the user (specifying home directory, "
+"and/or UID), please click the Advanced button."
+msgstr ""
+"ユーザーを作成している時点でもっと制御（ホームディレクトリや UIDの指定）が必"
+"要な場合は、 「高度な設定（Advanced）」ボタンをクリックして下さい。"
+
+#: ../modules/create_user.py:314
+msgid "_Advanced..."
+msgstr "高度な設定 (_A)..."
+
+#: ../modules/create_user.py:352
+msgid "Please wait"
+msgstr "お待ち下さい"
+
+#: ../modules/additional_cds.py:43 ../modules/additional_cds.py:44
+msgid "Additional CDs"
+msgstr "追加の CD"
+
+#: ../modules/additional_cds.py:55
+msgid ""
+"Please insert the disc labeled \"Red Hat Enterprise Linux Extras\" to allow "
+"for installation of third-party plug-ins and applications.  You may also "
+"insert the Documentation disc, or other Red Hat-provided discs to install "
+"additional software at this time."
+msgstr ""
+"サードパーティ製のプラグインやアプリケーションのインストールをするために "
+"\"Red Hat Enterprise Linux Extras\" というラベルのディスクを入れてください。"
+"この際、ドキュメントディスクや追加ソフトのインストールのために Red Hat の提供"
+"した他のディスクを挿入できます。"
+
+#: ../modules/additional_cds.py:61
+msgid "Please insert any additional software install cds at this time."
+msgstr "ここで追加ソフトウェアのインストール CD を挿入してください。"
+
+#: ../modules/additional_cds.py:65
+msgid ""
+"\n"
+"\n"
+"To enable runtime support of 32-bit applications on the Intel Itanium2 "
+"architecture you must install the Intel Execution Layer package from the "
+"Extras disc now."
+msgstr ""
+"\n"
+"\n"
+"Intel の Itanium2 アーキテクチャーで 32-bit アプリケーションのランタイムを有"
+"効にするには、ここでエクストラディスクから Intel Execution Layer パッケージを"
+"インストールする必要があります。"
+
+#: ../modules/additional_cds.py:73
+msgid "Install..."
+msgstr "インストール..."
+
+#: ../modules/additional_cds.py:110
+msgid ""
+"A CD-ROM has not been detected.  Please insert a CD-ROM in the drive and "
+"click \"OK\" to continue."
+msgstr ""
+"CD-ROM は検出されませんでした。CD-ROM をドライブに挿入して\"OK\"を クリックし"
+"て続けて下さい。"
+
+#: ../modules/additional_cds.py:146
+msgid "The autorun program cannot be found on the CD. Click \"OK\" to continue."
+msgstr "自動起動プログラムが CD 上に見つかりません。\"OK\" をクリックして継続します。"
+
+#: ../modules/eula.py:37 ../modules/eula.py:38
+msgid "License Information"
+msgstr "ライセンス情報"
+
+#: ../modules/eula.py:46
+msgid ""
+"Do you want to reread or reconsider the Licence Agreement?  If not, please "
+"shut down the computer and remove this product from your system. "
+msgstr ""
+"ライセンス同意書を再読するか、又は再考慮したいですか？ そうでなければ、 コン"
+"ピュータをシャットダウンして、この製品をシステムから取り出して下さい。"
+
+#: ../modules/eula.py:53
+msgid "_Reread license"
+msgstr "ライセンスの再読 (_R)"
+
+#: ../modules/eula.py:54
+msgid "_Shut down"
+msgstr "シャットダウン (_S)"
+
+#: ../modules/eula.py:95
+msgid "_Yes, I agree to the License Agreement"
+msgstr "はい、ライセンス同意書に同意します (_Y)"
+
+#: ../modules/eula.py:96
+msgid "N_o, I do not agree"
+msgstr "いいえ、同意しません (_O)"
+
+#: ../modules/welcome.py:35 ../modules/welcome.py:36
+msgid "Welcome"
+msgstr "ようこそ"
+
+#: ../modules/welcome.py:45
+msgid ""
+"There are a few more steps to take before your system is ready to use.  The "
+"Setup Agent will now guide you through some basic configuration.  Please "
+"click the \"Forward\" button in the lower right corner to continue"
+msgstr ""
+"システムが使用できるようになるまでもう少しステップがあります。セットアップ"
+"エージェントは、基本的な設定についてガイドしていきます。右下隅にある \"進む"
+"\" をクリックして、設定を継続します。"
+

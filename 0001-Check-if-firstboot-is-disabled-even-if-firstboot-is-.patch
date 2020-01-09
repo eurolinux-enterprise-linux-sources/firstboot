@@ -1,0 +1,40 @@
+From a285b525bd8f87c673e333b12c0f45918af3df69 Mon Sep 17 00:00:00 2001
+From: Martin Kolman <mkolman@redhat.com>
+Date: Mon, 16 Jun 2014 18:06:32 +0200
+Subject: [PATCH] Check if firstboot is disabled even if firstboot is run
+ directly (#1024176)
+
+And also tell the user why firstboot is not starting.
+
+Signed-off-by: Martin Kolman <mkolman@redhat.com>
+---
+ progs/firstboot | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+diff --git a/progs/firstboot b/progs/firstboot
+index 470aca6..51f66a2 100755
+--- a/progs/firstboot
++++ b/progs/firstboot
+@@ -136,6 +136,19 @@ if __name__ == "__main__":
+         config.mode = config.mode | MODE_RECONFIG
+ 
+     # First check to see if firstboot should even run.
++
++    # check if firstboot has not been disabled
++    config_path = "/etc/sysconfig/firstboot"
++    if os.path.isfile(config_path):
++        with open(config_path, "r") as f:
++            buf = f.readlines()
++            # check if one of the options in the config file (stripped of trailing newlines)
++            # is equal to the option that disables firstboot
++            if "RUN_FIRSTBOOT=NO" in (l.rstrip("\n") for l in buf):
++                logging.error(_("Firstboot startup disabled in /etc/sysconfig/firstboot, exiting."))
++                os._exit(0)
++
++    # check if we are running as root
+     if not opts.test and (os.getuid() > 0 or os.geteuid() > 0):
+         logging.error(_("You must be root to run firstboot."))
+         os._exit(0)
+-- 
+2.5.0
+

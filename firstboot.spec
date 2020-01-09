@@ -4,11 +4,17 @@ Summary: Initial system configuration utility
 Name: firstboot
 URL: http://fedoraproject.org/wiki/FirstBoot
 Version: 1.110.15
-Release: 1%{?dist}
+Release: 4%{?dist}
 # This is a Red Hat maintained package which is specific to
 # our distribution.  Thus the source is only available from
 # within this srpm.
 Source0: %{name}-%{version}.tar.bz2
+
+# Check if firstboot is disabled even if firstboot is run directly (#1024176)
+Patch1: 0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch
+
+# Fix a ksh specific error in the s390 startup script (#1117749)
+Patch2: 0002-Fix-a-ksh-specific-error-in-the-s390-startup-script-.patch
 
 License: GPLv2+
 Group: System Environment/Base
@@ -33,6 +39,10 @@ a series of steps that allows for easier configuration of the machine.
 
 %prep
 %setup -q
+
+# apply patches
+%patch1 -p1
+%patch2 -p1
 
 %build
 
@@ -85,6 +95,18 @@ fi
 
 
 %changelog
+* Fri Jan 15 2016 Martin Kolman <mkolman@redhat.com> 1.110.15-4
+- Fix a ksh specific error in the s390 startup script (#1117749)
+  Resolves: rhbz#1117749
+
+* Mon Jan 11 2016 Martin Kolman <mkolman@redhat.com> 1.110.15-3
+- Fix a bogus date in changelog (mkolman)
+  Related: rhbz#1024176
+
+* Mon Jan 11 2016 Martin Kolman <mkolman@redhat.com> 1.110.15-2
+- Check if firstboot is disabled even if firstboot is run directly (#1024176)
+  Resolves: rhbz#1024176
+
 * Tue Jul 09 2013 Vratislav Podzimek <vpodzime@redhat.com> 1.110.15-1
 - React properly on closing the EULA review dialog
   Resolves: rhbz#876018

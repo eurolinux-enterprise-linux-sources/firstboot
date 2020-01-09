@@ -1,0 +1,28 @@
+From 47c87aa5d9d8139162025a1555a01f99339867ee Mon Sep 17 00:00:00 2001
+From: Martin Kolman <mkolman@redhat.com>
+Date: Fri, 23 Oct 2015 12:21:00 +0200
+Subject: [PATCH] Fix a ksh specific error in the s390 startup script
+ (#1117749)
+
+Resolves: rhbz#1117749
+Signed-off-by: Martin Kolman <mkolman@redhat.com>
+---
+ scripts/firstboot.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/scripts/firstboot.sh b/scripts/firstboot.sh
+index 5b4ec9d..c5d73a2 100644
+--- a/scripts/firstboot.sh
++++ b/scripts/firstboot.sh
+@@ -7,7 +7,7 @@ FIRSTBOOT_CONF=/etc/sysconfig/firstboot
+ [ -f $FIRSTBOOT_CONF ] && . $FIRSTBOOT_CONF
+ 
+ # check if we should run firstboot
+-if [ -f $FIRSTBOOT_EXEC ] && [ "${RUN_FIRSTBOOT,,}" = "yes" ]; then
++if [ -f $FIRSTBOOT_EXEC ] && [ "$(echo $RUN_FIRSTBOOT | tr A-Z a-z)" = "yes" ]; then
+     # check if we're not on 3270 terminal and root
+     if [ $(/sbin/consoletype) = "pty" ] && [ $EUID -eq 0 ]; then
+         args=""
+-- 
+2.5.0
+

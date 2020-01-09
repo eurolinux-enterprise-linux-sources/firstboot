@@ -20,7 +20,7 @@
 import gtk
 import os, string, sys, time
 
-from firstboot.config import *
+from firstboot.config import config
 from firstboot.constants import *
 from firstboot.functions import *
 from firstboot.module import *
@@ -39,8 +39,9 @@ class moduleClass(Module):
         self.sidebarTitle = N_("Date and Time")
         self.title = N_("Date and Time")
         self.icon = "system-config-date.png"
+        self._firstboot_in_reconfig = (config.mode & MODE_RECONFIG)
 
-	self.scd = None
+        self.scd = None
 
     def apply(self, interface, testing=False):
         if testing:
@@ -58,13 +59,17 @@ class moduleClass(Module):
     def createScreen(self):
         self.vbox = gtk.VBox(spacing=5)
 
-	label = gtk.Label(_("Please set the date and time for the system."))
-	label.set_line_wrap(True)
-	label.set_alignment(0.0, 0.5)
-	label.set_size_request(500, -1)
-	self.vbox.pack_start(label, False, True, padding=20)
+        label = gtk.Label(_("Please set the date and time for the system."))
+        label.set_line_wrap(True)
+        label.set_alignment(0.0, 0.5)
+        label.set_size_request(500, -1)
+        self.vbox.pack_start(label, False, True, padding=20)
 
-	self.scd = scdMainWindow(firstboot=True, showPages=["datetime", "ntp"])
+        pages = ["datetime", "ntp"]
+        if self._firstboot_in_reconfig:
+            pages.append("timezone")
+
+        self.scd = scdMainWindow(firstboot=True, showPages=pages)
         self.vbox.pack_start(self.scd.firstboot_widget(), False, False)
 
     def initializeUI(self):

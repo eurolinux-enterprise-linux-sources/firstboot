@@ -3,7 +3,7 @@
 Summary: Initial system configuration utility
 Name: firstboot
 URL: http://fedoraproject.org/wiki/FirstBoot
-Version: 1.110.11
+Version: 1.110.13
 Release: 1%{?dist}
 # This is a Red Hat maintained package which is specific to
 # our distribution.  Thus the source is only available from
@@ -85,6 +85,14 @@ fi
 
 
 %changelog
+* Thu Apr 05 2012 Martin Gracik <mgracik@redhat.com> 1.110.13-1
+- Fix reconfig mode check in date module
+  Resolves: rhbz#704187
+
+* Mon Mar 05 2012 Martin Gracik <mgracik@redhat.com> 1.110.12-1
+- Add status to the init script (#753658)
+- Show timezone settings in reconfig mode (#704187)
+
 * Thu Jul 14 2011 Martin Gracik <mgracik@redhat.com> 1.110.11-1
 - Translation updates (#700283)
 

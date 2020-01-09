@@ -88,7 +88,24 @@ case "$1" in
         exit 0
         ;;
 
-    restart | reload | force-reload | status | condrestart | try-restart)
+    status)
+        /sbin/chkconfig --list firstboot | grep on >/dev/null
+        RETVAL=$?
+
+        if [ "$RETVAL" -eq 0 ]; then
+            if [ ! -f $FILENAME ] || [ -z "$(grep 'RUN_FIRSTBOOT=NO' $FILENAME)" ]; then
+                echo $"firstboot is scheduled to run"
+            else
+                echo $"firstboot is not scheduled to run"
+            fi
+        else
+            echo $"firstboot is not scheduled to run"
+        fi
+
+        exit 0
+        ;;
+
+    restart | reload | force-reload | condrestart | try-restart)
         usage
         exit 3
         ;;

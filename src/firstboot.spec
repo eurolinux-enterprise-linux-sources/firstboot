@@ -3,7 +3,7 @@
 Summary: Initial system configuration utility
 Name: firstboot
 URL: http://fedoraproject.org/wiki/FirstBoot
-Version: 1.110.14
+Version: 1.110.15
 Release: 1%{?dist}
 # This is a Red Hat maintained package which is specific to
 # our distribution.  Thus the source is only available from
@@ -85,6 +85,10 @@ fi
 
 
 %changelog
+* Tue Jul 09 2013 Vratislav Podzimek <vpodzime@redhat.com> 1.110.15-1
+- React properly on closing the EULA review dialog
+  Resolves: rhbz#876018
+
 * Wed Nov 07 2012 Martin Sivak <msivak@redhat.com> 1.110.14-1
 - Add support for EULA translations
   Resolves: rhbz#831818

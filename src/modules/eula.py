@@ -60,10 +60,12 @@ class moduleClass(Module):
             rc = dlg.run()
             dlg.destroy()
 
-            if rc == 0:
-                return RESULT_FAILURE
-            elif rc == 1:
+            if rc == 1:
+                # Shut down chosen
                 os.system("/sbin/halt")
+                return RESULT_FAILURE
+            else:
+                # Reread license chosen, the close (X) button clicked etc.
                 return RESULT_FAILURE
 
     def createScreen(self):

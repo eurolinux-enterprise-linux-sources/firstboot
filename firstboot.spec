@@ -4,7 +4,7 @@ Summary: Initial system configuration utility
 Name: firstboot
 URL: http://fedoraproject.org/wiki/FirstBoot
 Version: 19.9
-Release: 10%{?dist}
+Release: 8%{?dist}
 # This is a Red Hat maintained package which is specific to
 # our distribution.  Thus the source is only available from
 # within this srpm.
@@ -24,8 +24,6 @@ Patch5: 0005-Use-smaller-title-text-size-so-that-it-fits-on-the-s.patch
 Patch6: 0006-Fix-exception-handler-952633.patch
 # fix startup scripts for the s390
 Patch7: 0007-Fix-the-Firstboot-startup-scripts-for-the-s390-11806.patch
-# add a README
-Patch8: 0008-Add-a-README-1194155.patch
 
 License: GPLv2+
 Group: System Environment/Base
@@ -62,7 +60,6 @@ a series of steps that allows for easier configuration of the machine.
 %patch5 -p1
 %patch6 -p1
 %patch7 -p1
-%patch8 -p1
 
 %build
 
@@ -102,7 +99,6 @@ fi
 
 %files -f %{name}.lang
 %defattr(-,root,root,-)
-%doc README.txt
 %dir %{_datadir}/firstboot/
 %dir %{_datadir}/firstboot/modules/
 %dir %{_datadir}/firstboot/themes/
@@ -119,14 +115,6 @@ fi
 
 
 %changelog
-* Wed Jun 17 2015 Martin Kolman <mkolman@redhat.com> 19.9-10
-- Make sure the README file is properly installed (#1194155) (mkolman)
-  Resolves: rhbz#1194155
-
-* Wed Jun 17 2015 Martin Kolman <mkolman@redhat.com> 19.9-9
-- Add a README (#1194155) (mkolman)
-  Resolves: rhbz#1194155
-
 * Tue Jan 13 2015 Martin Kolman <mkolman@redhat.com> 19.9-8
 - Fix the Firstboot startup scripts for the s390 (#1180616) (jstodola)
   Resolves: rhbz#1180616

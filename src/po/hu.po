@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Arpad Biro <biro_arpad@yahoo.com>, 2005, 2007
+# Dimitris Glezos <glezos@transifex.com>, 2011
+# Máté Gelei <geleimate@fedoraproject.org>, 2012
+# ptr <ptr@ulx.hu>, 2012
+# Tamas Szanto <tszanto@mol.hu>, 2004
+# Zoltan Hoppár <hopparz@gmail.com>, 2011-2012
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-19 16:43+0100\n"
+"PO-Revision-Date: 2014-01-21 03:21-0500\n"
+"Last-Translator: vpodzime <vpodzime@redhat.com>\n"
+"Language-Team: Hungarian (http://www.transifex.com/projects/p/fedora/language/hu/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.8.4\n"
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:31
+msgid "Firstboot startup disabled in /etc/sysconfig/firstboot, exiting."
+msgstr ""
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:36
+msgid "You must be root to run firstboot."
+msgstr ""
+
+#: ../progs/firstboot:108
+msgid "only root can do this"
+msgstr ""
+
+#: ../firstboot/moduleset.py:92
+#, python-format
+msgid "Module %s did not set up its UI; removing."
+msgstr ""
+"A modul: %s felhasználói felületének elindítása sikertelen, eltávolítás..."
+
+#: ../firstboot/interface.py:82
+msgid "Attempted to go back, but history is empty."
+msgstr "A visszalépés nem lehetséges, mert nincs előzmény."
+
+#. If we were previously on the last page, we need to set the Next
+#. button's label back to normal.
+#: ../firstboot/interface.py:90 ../firstboot/interface.py:160
+#: ../firstboot/interface.py:172
+msgid "_Done"
+msgstr ""
+
+#: ../firstboot/interface.py:195
+msgid "The system must now reboot for some of your selections to take effect."
+msgstr ""
+"Néhány változás érvénybe léptetéséhez újra kell indítania a rendszert."
+
+#: ../firstboot/interface.py:271
+msgid "_Back"
+msgstr "Vissza"
+
+#: ../firstboot/interface.py:278
+msgid "_Forward"
+msgstr "Tovább"
+
+#: ../firstboot/interface.py:306
+#, python-format
+msgid "Module %s raised an exception while loading: %s"
+msgstr "A modul: %s betöltéskor nem kezelt kivétel történt: %s"
+
+#: ../firstboot/interface.py:310
+#, python-format
+msgid "Module %s did not set up its UI properly."
+msgstr "A modul: %s nem jól állította be a grafikus felületet."
+
+#: ../firstboot/interface.py:316
+#, python-format
+msgid "Module %s raised an exception while rendering: %s"
+msgstr "A modul: %s nem kezelt kivétel történt a megjelenítés közben: %s"
+
+#: ../firstboot/interface.py:375
+#, python-format
+msgid "Module %s did not setup its UI properly"
+msgstr "Modul: %s nem állította be a kezelőfelületét helyesen"
+
+#: ../firstboot/interface.py:390 ../firstboot/interface.py:391
+msgid "moveToPage must be given a module title or page number."
+msgstr ""
+"A moveToPage számára meg kell adni egy modul címét vagy egy lap számát."
+
+#: ../firstboot/interface.py:479
+msgid "Unable to create the screenshot dir; skipping."
+msgstr "Nem sikerült létrehozni a képernyőkép mappáját; kihagyás."
+
+#: ../firstboot/interface.py:519 ../firstboot/interface.py:520
+#, python-format
+msgid "No module exists with the title %s."
+msgstr "Nincs %s nevű modul."
+
+#: ../firstboot/pwcheck.py:46
+msgid "Very weak"
+msgstr "Nagyon gyenge"
+
+#: ../firstboot/pwcheck.py:47
+msgid "Weak"
+msgstr "Gyenge"
+
+#: ../firstboot/pwcheck.py:48
+msgid "Fairly strong"
+msgstr "Elég erős"
+
+#: ../firstboot/pwcheck.py:49
+msgid "Strong"
+msgstr "Erős"
+
+#: ../firstboot/pwcheck.py:50
+msgid "Very strong"
+msgstr "Nagyon erős"

@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Dimitris Glezos <glezos@transifex.com>, 2011
+# Dušan Kazik <prescott66@gmail.com>, 2012
+# feonsu <feonsu@gmail.com>, 2011
+# Marcel Telka <marcel@telka.sk>, 2004, 2005
+# Mike Karas <zoliqe@gmail.com>, 2007
+# Ondrej Šulek <feonsu@gmail.com>, 2008, 2011
+# Pavol Šimo <palo.simo@gmail.com>, 2008, 2011
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-19 16:43+0100\n"
+"PO-Revision-Date: 2014-01-21 03:21-0500\n"
+"Last-Translator: vpodzime <vpodzime@redhat.com>\n"
+"Language-Team: Slovak (http://www.transifex.com/projects/p/fedora/language/sk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sk\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Zanata 3.8.4\n"
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:31
+msgid "Firstboot startup disabled in /etc/sysconfig/firstboot, exiting."
+msgstr ""
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:36
+msgid "You must be root to run firstboot."
+msgstr ""
+
+#: ../progs/firstboot:108
+msgid "only root can do this"
+msgstr ""
+
+#: ../firstboot/moduleset.py:92
+#, python-format
+msgid "Module %s did not set up its UI; removing."
+msgstr "Modul %s nenastavil svoje rozhranie; odstránený."
+
+#: ../firstboot/interface.py:82
+msgid "Attempted to go back, but history is empty."
+msgstr "Pokus o krok späť, ale história je prázdna."
+
+#. If we were previously on the last page, we need to set the Next
+#. button's label back to normal.
+#: ../firstboot/interface.py:90 ../firstboot/interface.py:160
+#: ../firstboot/interface.py:172
+msgid "_Done"
+msgstr ""
+
+#: ../firstboot/interface.py:195
+msgid "The system must now reboot for some of your selections to take effect."
+msgstr ""
+"Aby sa prejavili niektoré z vašich volieb, systém musí byť reštartovaný."
+
+#: ../firstboot/interface.py:271
+msgid "_Back"
+msgstr "_Späť"
+
+#: ../firstboot/interface.py:278
+msgid "_Forward"
+msgstr "Ď_alej"
+
+#: ../firstboot/interface.py:306
+#, python-format
+msgid "Module %s raised an exception while loading: %s"
+msgstr "Modul %s spôsobil výnimku počas načítavania: %s"
+
+#: ../firstboot/interface.py:310
+#, python-format
+msgid "Module %s did not set up its UI properly."
+msgstr "Modul %s nenastavil správne svoje užívateľské rozhranie."
+
+#: ../firstboot/interface.py:316
+#, python-format
+msgid "Module %s raised an exception while rendering: %s"
+msgstr "Modul %s spôsobil výnimku počas vykresľovania: %s"
+
+#: ../firstboot/interface.py:375
+#, python-format
+msgid "Module %s did not setup its UI properly"
+msgstr "Modul %s nenastavil svoje rozhranie správne"
+
+#: ../firstboot/interface.py:390 ../firstboot/interface.py:391
+msgid "moveToPage must be given a module title or page number."
+msgstr "moveToPage musí dostať nadpis modulu alebo číslo stránky."
+
+#: ../firstboot/interface.py:479
+msgid "Unable to create the screenshot dir; skipping."
+msgstr "Nepodarilo sa vytvoriť adresár snímok obrazovky; vynechané."
+
+#: ../firstboot/interface.py:519 ../firstboot/interface.py:520
+#, python-format
+msgid "No module exists with the title %s."
+msgstr "Modul s nadpisom %s neexistuje."
+
+#: ../firstboot/pwcheck.py:46
+msgid "Very weak"
+msgstr "Veľmi slabé"
+
+#: ../firstboot/pwcheck.py:47
+msgid "Weak"
+msgstr "Slabé"
+
+#: ../firstboot/pwcheck.py:48
+msgid "Fairly strong"
+msgstr "Dosť silné"
+
+#: ../firstboot/pwcheck.py:49
+msgid "Strong"
+msgstr "Silné"
+
+#: ../firstboot/pwcheck.py:50
+msgid "Very strong"
+msgstr "Veľmi silné"

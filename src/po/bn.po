@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Ashabul Yeameen <ayeameen@yahoo.com>, 2003
+# Ayesha Akhtar <ayesha@ankur.org.bd>, 2012
+# Dimitris Glezos <glezos@transifex.com>, 2011
+# Mahay Alam Khan <mak@ankur.org.bd>, 2012
+# newton <newton@ankur.org.bd>, 2012
+# Robin Mehdee <robin@ankur.org.bd>, 2012
+# Runa Bhattacharjee <runab@fedoraproject.org>, 2008
+# runab <runab@redhat.com>, 2004, 2005, 2006, 2007, 2008, 2009, 2010
+# runa <runabh@gmail.com>, 2012
+# Samia Niamatullah <mailsamia2001@yahoo.com>, 2005
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-19 16:43+0100\n"
+"PO-Revision-Date: 2014-01-21 03:21-0500\n"
+"Last-Translator: vpodzime <vpodzime@redhat.com>\n"
+"Language-Team: Bengali (http://www.transifex.com/projects/p/fedora/language/bn/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: bn\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.8.4\n"
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:31
+msgid "Firstboot startup disabled in /etc/sysconfig/firstboot, exiting."
+msgstr ""
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:36
+msgid "You must be root to run firstboot."
+msgstr ""
+
+#: ../progs/firstboot:108
+msgid "only root can do this"
+msgstr ""
+
+#: ../firstboot/moduleset.py:92
+#, python-format
+msgid "Module %s did not set up its UI; removing."
+msgstr ""
+"%s মডিউল দ্বারা প্রয়োজনীয় ইউজার ইন্টারফেস নির্ধারণ করা যায়নি; মুছে ফেলা "
+"হচ্ছে।"
+
+#: ../firstboot/interface.py:82
+msgid "Attempted to go back, but history is empty."
+msgstr "প্রত্যাবর্তনের প্রচেষ্টা করা হয়েছে, কিন্তু পূর্ববর্তী তথ্য ফাঁকা।"
+
+#. If we were previously on the last page, we need to set the Next
+#. button's label back to normal.
+#: ../firstboot/interface.py:90 ../firstboot/interface.py:160
+#: ../firstboot/interface.py:172
+msgid "_Done"
+msgstr ""
+
+#: ../firstboot/interface.py:195
+msgid "The system must now reboot for some of your selections to take effect."
+msgstr "আপনার করা পরিবর্তনগুলি প্রয়োগ করার জন্য সিস্টেম পুনরায় আরম্ভ করা হবে।"
+
+#: ../firstboot/interface.py:271
+msgid "_Back"
+msgstr "পূর্ববর্তী (_B)"
+
+#: ../firstboot/interface.py:278
+msgid "_Forward"
+msgstr "পরবর্তী (_F)"
+
+#: ../firstboot/interface.py:306
+#, python-format
+msgid "Module %s raised an exception while loading: %s"
+msgstr "মডিউল %s একটি ব্যতিক্রম উত্থাপন করেছে যখন লোড হচ্ছিল: %s"
+
+#: ../firstboot/interface.py:310
+#, python-format
+msgid "Module %s did not set up its UI properly."
+msgstr "%s মডিউল সঠিক ভাবে UI সেটআপ করেনি।"
+
+#: ../firstboot/interface.py:316
+#, python-format
+msgid "Module %s raised an exception while rendering: %s"
+msgstr "মডিউল %s একটি ব্যতিক্রম উত্থাপন করেছে যখন রেন্ডার করা হচ্ছিল: %s"
+
+#: ../firstboot/interface.py:375
+#, python-format
+msgid "Module %s did not setup its UI properly"
+msgstr ""
+
+#: ../firstboot/interface.py:390 ../firstboot/interface.py:391
+msgid "moveToPage must be given a module title or page number."
+msgstr ""
+"moveToPage-র ক্ষেত্রে মডিউলের শিরোনাম অথবা পৃষ্ঠার সংখ্যা উল্লেখ করা আবশ্যক।"
+
+#: ../firstboot/interface.py:479
+msgid "Unable to create the screenshot dir; skipping."
+msgstr "স্ক্রিন-শট ডিরেক্টরি নির্মাণ করতে ব্যর্থ; উপেক্ষা করা হচ্ছে।"
+
+#: ../firstboot/interface.py:519 ../firstboot/interface.py:520
+#, python-format
+msgid "No module exists with the title %s."
+msgstr "%s শিরোনামের অধীন কোনো মডিউল উপস্থিত নেই।"
+
+#: ../firstboot/pwcheck.py:46
+msgid "Very weak"
+msgstr "অত্যন্ত দুর্বল"
+
+#: ../firstboot/pwcheck.py:47
+msgid "Weak"
+msgstr "দুর্বল"
+
+#: ../firstboot/pwcheck.py:48
+msgid "Fairly strong"
+msgstr "কিছুমাত্রায় দৃঢ়"
+
+#: ../firstboot/pwcheck.py:49
+msgid "Strong"
+msgstr "দৃঢ়"
+
+#: ../firstboot/pwcheck.py:50
+msgid "Very strong"
+msgstr "অত্যন্ত দৃঢ়"

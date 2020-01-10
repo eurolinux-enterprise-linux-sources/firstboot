@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Amanpreet Singh Alam <aalam@redhat.com>, 2004,2006
+# Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005
+# A P Singh <apbrar@gmail.com>, 2006
+# A S Alam <aalam@users.sf.net>, 2007,2009
+# A S Alam <apbrar@gmail.com>, 2006
+# Automatically generated <punjablinux@netscape.net>, 2004
+# Dimitris Glezos <glezos@indifex.com>, 2011
+# Harmeet Singh Phulewala <harmeetphulewala@yahoo.com>, 2005
+# Jaswinder Singh <j.phulewala@gmail.com>, 2011
+# Jaswinder Singh <jsingh@redhat.com>, 2007-2009,2011-2012
+# A S Alam <aalam@fedoraproject.org>, 2015. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-19 16:43+0100\n"
+"PO-Revision-Date: 2015-01-20 10:23-0500\n"
+"Last-Translator: A S Alam <aalam@fedoraproject.org>\n"
+"Language-Team: Panjabi (Punjabi) (http://www.transifex.com/projects/p/fedora/language/pa/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pa\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.8.4\n"
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:31
+msgid "Firstboot startup disabled in /etc/sysconfig/firstboot, exiting."
+msgstr ""
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:36
+msgid "You must be root to run firstboot."
+msgstr ""
+
+#: ../progs/firstboot:108
+msgid "only root can do this"
+msgstr "ਸਿਰਫ ਰੂਟ ਇਹ ਕਰ ਸਕਦਾ ਹੈ"
+
+#: ../firstboot/moduleset.py:92
+#, python-format
+msgid "Module %s did not set up its UI; removing."
+msgstr "ਮੌਡਿਊਲ %s ਨੇ ਆਪਣਾ UI ਸੈੱਟਅੱਪ ਨਹੀਂ ਕੀਤਾ। ਹਟਾਇਆ ਜਾ ਰਿਹਾ ਹੈ।"
+
+#: ../firstboot/interface.py:82
+msgid "Attempted to go back, but history is empty."
+msgstr "ਪਿੱਛੇ ਜਾਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ ਗਈ, ਪਰ ਅਤੀਤ ਖਾਲੀ ਹੈ।"
+
+#. If we were previously on the last page, we need to set the Next
+#. button's label back to normal.
+#: ../firstboot/interface.py:90 ../firstboot/interface.py:160
+#: ../firstboot/interface.py:172
+msgid "_Done"
+msgstr ""
+
+#: ../firstboot/interface.py:195
+msgid "The system must now reboot for some of your selections to take effect."
+msgstr ""
+"ਸਿਸਟਮ ਹੁਣ ਤੁਹਾਡੇ ਰਾਹੀਂ ਕੀਤੀਆਂ ਗਈਆਂ ਤਬਦੀਲੀਆਂ ਨੂੰ ਲਾਗੂ ਕਰਨ ਲਈ ਮੁੜ ਚਾਲੂ ਹੋਵੇਗਾ।"
+
+#: ../firstboot/interface.py:271
+msgid "_Back"
+msgstr "ਪਿੱਛੇ (_B)"
+
+#: ../firstboot/interface.py:278
+msgid "_Forward"
+msgstr "ਅੱਗੇ (_F)"
+
+#: ../firstboot/interface.py:306
+#, python-format
+msgid "Module %s raised an exception while loading: %s"
+msgstr "ਮੋਡੀਊਲ %s ਲੋਡ ਹੋਣ ਵੇਲੇ ਇੱਕ ਅਪਵਾਦ ਖੜਾ ਕੀਤਾ: %s"
+
+#: ../firstboot/interface.py:310
+#, python-format
+msgid "Module %s did not set up its UI properly."
+msgstr "ਮੋਡੀਊਲ %s ਨੇ ਆਪਣਾ UI ਸਹੀ ਢੰਗ ਨਾਲ ਸੈੱਟਅੱਪ ਨਹੀਂ ਕੀਤਾ।"
+
+#: ../firstboot/interface.py:316
+#, python-format
+msgid "Module %s raised an exception while rendering: %s"
+msgstr "ਮੌਡਿਊਲ %s ਰੈਂਡਰਿੰਗ ਵੇਲੇ ਇੱਕ ਅਪਵਾਦ ਖੜਾ ਕੀਤਾ: %s"
+
+#: ../firstboot/interface.py:375
+#, python-format
+msgid "Module %s did not setup its UI properly"
+msgstr "ਮੋਡੀਊਲ %s ਨੇ ਆਪਣਾ UI ਸਹੀ ਢੰਗ ਨਾਲ ਸੈੱਟਅੱਪ ਨਹੀਂ ਕੀਤਾ"
+
+#: ../firstboot/interface.py:390 ../firstboot/interface.py:391
+msgid "moveToPage must be given a module title or page number."
+msgstr "moveToPage ਨੂੰ ਮੋਡੀਊਲ ਸਿਰਲੇਖ ਜਾਂ ਸਫਾ ਨੰਬਰ ਦੇਣਾ ਜਰੂਰੀ ਹੈ।"
+
+#: ../firstboot/interface.py:479
+msgid "Unable to create the screenshot dir; skipping."
+msgstr "ਸਕਰੀਨ-ਸ਼ਾਟ ਡਾਇਰੈਕਟਰੀ ਬਣਾਉਣ ਤੋਂ ਅਸਮਰੱਥ; ਛੱਡਿਆ ਜਾ ਰਿਹਾ ਹੈ।"
+
+#: ../firstboot/interface.py:519 ../firstboot/interface.py:520
+#, python-format
+msgid "No module exists with the title %s."
+msgstr "%s ਸਿਰਲੇਖ ਵਾਲਾ ਕੋਈ ਮੌਡਿਊਲ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
+
+#: ../firstboot/pwcheck.py:46
+msgid "Very weak"
+msgstr "ਬਹੁਤ ਕਮਜੋਰ"
+
+#: ../firstboot/pwcheck.py:47
+msgid "Weak"
+msgstr "ਕਮਜੋਰ"
+
+#: ../firstboot/pwcheck.py:48
+msgid "Fairly strong"
+msgstr "ਥੋੜਾ ਮਜਬੂਤ"
+
+#: ../firstboot/pwcheck.py:49
+msgid "Strong"
+msgstr "ਮਜਬੂਤ"
+
+#: ../firstboot/pwcheck.py:50
+msgid "Very strong"
+msgstr "ਬਹੁਤ ਮਜਬੂਤ"

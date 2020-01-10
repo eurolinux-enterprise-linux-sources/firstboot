@@ -1,0 +1,119 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Dimitris Glezos <glezos@transifex.com>, 2011
+# Dimitris Glezos <glezos@transifex.com>, 2011
+# Maxim Dziumanenko <dziumanenko@gmail.com>, 2003
+# Yuri Chornoivan <yurchor@ukr.net>, 2011-2012,2014
+# Yuri Chornoivan <yurchor@ukr.net>, 2016. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-19 16:43+0100\n"
+"PO-Revision-Date: 2016-02-20 09:09-0500\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian (http://www.transifex.com/projects/p/fedora/language/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Zanata 3.8.4\n"
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:31
+msgid "Firstboot startup disabled in /etc/sysconfig/firstboot, exiting."
+msgstr ""
+"Запуск firstboot вимкнено у /etc/sysconfig/firstboot, завершуємо роботу."
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:36
+msgid "You must be root to run firstboot."
+msgstr "Для виконання firstboot необхідні повноваження адміністратора (root)."
+
+#: ../progs/firstboot:108
+msgid "only root can do this"
+msgstr "дію може виконувати лише адміністратор (root)"
+
+#: ../firstboot/moduleset.py:92
+#, python-format
+msgid "Module %s did not set up its UI; removing."
+msgstr "Модуль %s не налаштував свій інтерфейс користувача та буде видалений."
+
+#: ../firstboot/interface.py:82
+msgid "Attempted to go back, but history is empty."
+msgstr "При спробі повернуться назад виявлено, що історія повернень порожня."
+
+#. If we were previously on the last page, we need to set the Next
+#. button's label back to normal.
+#: ../firstboot/interface.py:90 ../firstboot/interface.py:160
+#: ../firstboot/interface.py:172
+msgid "_Done"
+msgstr "_Виконано"
+
+#: ../firstboot/interface.py:195
+msgid "The system must now reboot for some of your selections to take effect."
+msgstr ""
+"Систему треба перезавантажити, перш ніж деякі зроблені зміни наберуть сили."
+
+#: ../firstboot/interface.py:271
+msgid "_Back"
+msgstr "_Назад"
+
+#: ../firstboot/interface.py:278
+msgid "_Forward"
+msgstr "_Далі"
+
+#: ../firstboot/interface.py:306
+#, python-format
+msgid "Module %s raised an exception while loading: %s"
+msgstr "Під час завантаження модуля %s сталося виключення: %s"
+
+#: ../firstboot/interface.py:310
+#, python-format
+msgid "Module %s did not set up its UI properly."
+msgstr "Модулем %s не встановлено належного інтерфейсу користувача."
+
+#: ../firstboot/interface.py:316
+#, python-format
+msgid "Module %s raised an exception while rendering: %s"
+msgstr "Під час обробки модуля %s сталося виключення: %s"
+
+#: ../firstboot/interface.py:375
+#, python-format
+msgid "Module %s did not setup its UI properly"
+msgstr "Модулем %s не налаштовано належним чином власний інтерфейс"
+
+#: ../firstboot/interface.py:390 ../firstboot/interface.py:391
+msgid "moveToPage must be given a module title or page number."
+msgstr "moveToPage має бути заголовком модуля або номером сторінки."
+
+#: ../firstboot/interface.py:479
+msgid "Unable to create the screenshot dir; skipping."
+msgstr "Неможливо створити каталог знімків екрану, пропускаємо."
+
+#: ../firstboot/interface.py:519 ../firstboot/interface.py:520
+#, python-format
+msgid "No module exists with the title %s."
+msgstr "Немає модуля із заголовком %s."
+
+#: ../firstboot/pwcheck.py:46
+msgid "Very weak"
+msgstr "Дуже простий"
+
+#: ../firstboot/pwcheck.py:47
+msgid "Weak"
+msgstr "Простий"
+
+#: ../firstboot/pwcheck.py:48
+msgid "Fairly strong"
+msgstr "Доволі складний"
+
+#: ../firstboot/pwcheck.py:49
+msgid "Strong"
+msgstr "Складний"
+
+#: ../firstboot/pwcheck.py:50
+msgid "Very strong"
+msgstr "Дуже складний"

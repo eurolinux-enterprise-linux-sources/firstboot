@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Dimitris Glezos <glezos@indifex.com>, 2011
+# Rahul Bhalerao <b.rahul.pm@gmail.com>, 2006
+# Rahul Bhalerao <rbhalera@redhat.com>, 2006
+# sandeep shedmake <sandeep.shedmake@gmail.com>, 2007
+# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2008-2009
+# sandeeps <sshedmak@redhat.com>, 2008, 2009
+# sandeeps <sshedmak@redhat.com>, 2008-2009,2011-2012,2014
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-19 16:43+0100\n"
+"PO-Revision-Date: 2014-01-21 05:18-0500\n"
+"Last-Translator: sandeeps <sshedmak@redhat.com>\n"
+"Language-Team: Marathi (http://www.transifex.com/projects/p/fedora/language/mr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: mr\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.8.4\n"
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:31
+msgid "Firstboot startup disabled in /etc/sysconfig/firstboot, exiting."
+msgstr ""
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:36
+msgid "You must be root to run firstboot."
+msgstr ""
+
+#: ../progs/firstboot:108
+msgid "only root can do this"
+msgstr "फक्त रूट वापरकर्ता असे करू शकते"
+
+#: ../firstboot/moduleset.py:92
+#, python-format
+msgid "Module %s did not set up its UI; removing."
+msgstr "घटक %s ने त्याचे UI निश्चित केले नाही; काढूण टाकत आहे."
+
+#: ../firstboot/interface.py:82
+msgid "Attempted to go back, but history is empty."
+msgstr "पाठीमागे जाण्याचा प्रयत्न केला, पण इतिहास रिकामा आहे."
+
+#. If we were previously on the last page, we need to set the Next
+#. button's label back to normal.
+#: ../firstboot/interface.py:90 ../firstboot/interface.py:160
+#: ../firstboot/interface.py:172
+msgid "_Done"
+msgstr ""
+
+#: ../firstboot/interface.py:195
+msgid "The system must now reboot for some of your selections to take effect."
+msgstr ""
+"तुमच्या काहिक पसंती प्रभावी ठरण्यासाठी प्रणालीला पुनःसुरू करावे लागेल."
+
+#: ../firstboot/interface.py:271
+msgid "_Back"
+msgstr "मागे (_B)"
+
+#: ../firstboot/interface.py:278
+msgid "_Forward"
+msgstr "पुढे (_F)"
+
+#: ../firstboot/interface.py:306
+#, python-format
+msgid "Module %s raised an exception while loading: %s"
+msgstr "लोड करतेवेळी विभाग %s तर्फे अपवाद निर्माण झाले: %s"
+
+#: ../firstboot/interface.py:310
+#, python-format
+msgid "Module %s did not set up its UI properly."
+msgstr "विभाग %s ने UI योग्यरित्या ठरवले नाही."
+
+#: ../firstboot/interface.py:316
+#, python-format
+msgid "Module %s raised an exception while rendering: %s"
+msgstr "दाखवतेवेळी विभाग %s तर्फे अपवाद निर्माण केले: %s"
+
+#: ../firstboot/interface.py:375
+#, python-format
+msgid "Module %s did not setup its UI properly"
+msgstr "विभाग %s ने UI योग्यरित्या ठरवले नाही"
+
+#: ../firstboot/interface.py:390 ../firstboot/interface.py:391
+msgid "moveToPage must be given a module title or page number."
+msgstr "moveToPage यांस घटकाचे शिर्षक किंवा पृष्ट क्रमांक पुरवले पाहिजे."
+
+#: ../firstboot/interface.py:479
+msgid "Unable to create the screenshot dir; skipping."
+msgstr "स्क्रीनशॉट डिरेक्ट्री बनविता आले नाही; वगळत आहे."
+
+#: ../firstboot/interface.py:519 ../firstboot/interface.py:520
+#, python-format
+msgid "No module exists with the title %s."
+msgstr "शिर्षक %s सह घटक अस्तित्वात नाही."
+
+#: ../firstboot/pwcheck.py:46
+msgid "Very weak"
+msgstr "खूपच कमकुवत"
+
+#: ../firstboot/pwcheck.py:47
+msgid "Weak"
+msgstr "कमकुवत"
+
+#: ../firstboot/pwcheck.py:48
+msgid "Fairly strong"
+msgstr "बऱ्यापैकी पक्के"
+
+#: ../firstboot/pwcheck.py:49
+msgid "Strong"
+msgstr "पक्के"
+
+#: ../firstboot/pwcheck.py:50
+msgid "Very strong"
+msgstr "खूपच पक्के"

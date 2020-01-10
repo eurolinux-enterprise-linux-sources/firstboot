@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Dimitris Glezos <glezos@transifex.com>, 2011
+# Hajime Taira <htaira@redhat.com>, 2010-2012
+# Hirofumi Saito <hi_saito@yk.rim.or.jp>, 2004, 2005, 2006
+# hyuugabaru <hyu_gabaru@yahoo.co.jp>, 2007
+# Kiyoto Hashida <khashida@redhat.com>, 2002, 2003
+# Kiyoto Hashida <khashida@redhat.com>, 2008, 2009, 2010
+# Kiyoto Hashida <khashida@redhat.com>, 2006
+# Makoto Mizukami <mmk9060@aol.com>, 2008
+# noriko <noriko@fedoraproject.org>, 2014
+# Noriko Mizumoto <noriko@redhat.com>, 2003, 2005, 2006
+# Tadashi Jokagi <fedora@elf.no-ip.org>, 2004
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012
+# Kenzo Moriguchi <kmoriguc@redhat.com>, 2016. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-19 16:43+0100\n"
+"PO-Revision-Date: 2016-03-14 08:23-0400\n"
+"Last-Translator: Kenzo Moriguchi <kmoriguc@redhat.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/fedora/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Zanata 3.8.4\n"
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:31
+msgid "Firstboot startup disabled in /etc/sysconfig/firstboot, exiting."
+msgstr "初期起動の開始が /etc/sysconfig/firstboot で無効になっています。終了します。"
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:36
+msgid "You must be root to run firstboot."
+msgstr "初期起動は root で実行する必要があります。"
+
+#: ../progs/firstboot:108
+msgid "only root can do this"
+msgstr "これが実行できるのは root ユーザーのみです"
+
+#: ../firstboot/moduleset.py:92
+#, python-format
+msgid "Module %s did not set up its UI; removing."
+msgstr "%s モジュールは、ユーザーインターフェイスが設定されていません。削除します。"
+
+#: ../firstboot/interface.py:82
+msgid "Attempted to go back, but history is empty."
+msgstr "戻ろうとしましたが、ページの履歴がありません。"
+
+#. If we were previously on the last page, we need to set the Next
+#. button's label back to normal.
+#: ../firstboot/interface.py:90 ../firstboot/interface.py:160
+#: ../firstboot/interface.py:172
+msgid "_Done"
+msgstr "完了 (_D)"
+
+#: ../firstboot/interface.py:195
+msgid "The system must now reboot for some of your selections to take effect."
+msgstr "いくつかの選択を有効にする為、システムを再起動する必要があります。"
+
+#: ../firstboot/interface.py:271
+msgid "_Back"
+msgstr "戻る(_B)"
+
+#: ../firstboot/interface.py:278
+msgid "_Forward"
+msgstr "進む(_F)"
+
+#: ../firstboot/interface.py:306
+#, python-format
+msgid "Module %s raised an exception while loading: %s"
+msgstr "%s モジュールが読み込み中に例外を発生させました: %s"
+
+#: ../firstboot/interface.py:310
+#, python-format
+msgid "Module %s did not set up its UI properly."
+msgstr "%s モジュールは UI プロパティーをセットアップできません。"
+
+#: ../firstboot/interface.py:316
+#, python-format
+msgid "Module %s raised an exception while rendering: %s"
+msgstr "%s モジュールがレンダリング中に例外を発生させました: %s"
+
+#: ../firstboot/interface.py:375
+#, python-format
+msgid "Module %s did not setup its UI properly"
+msgstr "モジュール %s は UI が正しくセットアップされませんでした"
+
+#: ../firstboot/interface.py:390 ../firstboot/interface.py:391
+msgid "moveToPage must be given a module title or page number."
+msgstr "ページの移動には、モジュールのタイトルかページ番号が必要です。"
+
+#: ../firstboot/interface.py:479
+msgid "Unable to create the screenshot dir; skipping."
+msgstr "スクリーンショット保存用のディレクトリーが作成できません。スキップします。"
+
+#: ../firstboot/interface.py:519 ../firstboot/interface.py:520
+#, python-format
+msgid "No module exists with the title %s."
+msgstr "%s という名前のモジュールは存在しません。"
+
+#: ../firstboot/pwcheck.py:46
+msgid "Very weak"
+msgstr "非常に強度が弱い"
+
+#: ../firstboot/pwcheck.py:47
+msgid "Weak"
+msgstr "強度が弱い"
+
+#: ../firstboot/pwcheck.py:48
+msgid "Fairly strong"
+msgstr "やや強度が高い"
+
+#: ../firstboot/pwcheck.py:49
+msgid "Strong"
+msgstr "強度が高い"
+
+#: ../firstboot/pwcheck.py:50
+msgid "Very strong"
+msgstr "非常に強度が高い"

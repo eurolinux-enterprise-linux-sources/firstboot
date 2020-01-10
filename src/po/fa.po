@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Abbas Izad <abbasizad@hotmail.com>, 2003, 2004
+# adib rastegarnia <adib.rastegar.ir@gmail.com>, 2011
+# Amir Farsi <afarsi@ymail.com>, 2008
+# Daniyal Yousefi <da.yousefi@gmail.com>, 2011
+# Dimitris Glezos <glezos@transifex.com>, 2011
+# Elnaz Sarbar <elnaz@farsiweb.info>, 2006
+# Hamed Malek <hamed@bamdad.org>, 2005
+# Meelad Zakaria <meelad@farsiweb.info>, 2005, 2006
+# Noori <nanopqr@gmail.com>, 2012
+# Roozbeh Pournader <roozbeh@farsiweb.info>, 2006
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-19 16:43+0100\n"
+"PO-Revision-Date: 2014-01-21 03:21-0500\n"
+"Last-Translator: vpodzime <vpodzime@redhat.com>\n"
+"Language-Team: Persian (http://www.transifex.com/projects/p/fedora/language/fa/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fa\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Zanata 3.8.4\n"
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:31
+msgid "Firstboot startup disabled in /etc/sysconfig/firstboot, exiting."
+msgstr ""
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:36
+msgid "You must be root to run firstboot."
+msgstr ""
+
+#: ../progs/firstboot:108
+msgid "only root can do this"
+msgstr ""
+
+#: ../firstboot/moduleset.py:92
+#, python-format
+msgid "Module %s did not set up its UI; removing."
+msgstr "ماژول %s رابط گرافیکی‌اش تنظیم نشده است، در حال حذف."
+
+#: ../firstboot/interface.py:82
+msgid "Attempted to go back, but history is empty."
+msgstr "تلاش برای بازگشت، اما تاریخچه خالی است."
+
+#. If we were previously on the last page, we need to set the Next
+#. button's label back to normal.
+#: ../firstboot/interface.py:90 ../firstboot/interface.py:160
+#: ../firstboot/interface.py:172
+msgid "_Done"
+msgstr ""
+
+#: ../firstboot/interface.py:195
+msgid "The system must now reboot for some of your selections to take effect."
+msgstr ""
+"برای اعمال شدن برخی از انتخاب‌های شما سیستم باید هم‌اکنون مجدداً راه‌اندازی "
+"شود."
+
+#: ../firstboot/interface.py:271
+msgid "_Back"
+msgstr "عقب"
+
+#: ../firstboot/interface.py:278
+msgid "_Forward"
+msgstr "جلو"
+
+#: ../firstboot/interface.py:306
+#, python-format
+msgid "Module %s raised an exception while loading: %s"
+msgstr "ماژول %s در هنگام بارگیری: %s یک استثناء ایجاد کرد"
+
+#: ../firstboot/interface.py:310
+#, python-format
+msgid "Module %s did not set up its UI properly."
+msgstr "ماژول %s رابط گرافیکی‌اش را به درستی راه‌اندازی نمی‌کند."
+
+#: ../firstboot/interface.py:316
+#, python-format
+msgid "Module %s raised an exception while rendering: %s"
+msgstr "ماژول %s در هنگام اجرای «رندرکردن»: %s یک استثناء ایجاد کرد"
+
+#: ../firstboot/interface.py:375
+#, python-format
+msgid "Module %s did not setup its UI properly"
+msgstr ""
+
+#: ../firstboot/interface.py:390 ../firstboot/interface.py:391
+msgid "moveToPage must be given a module title or page number."
+msgstr "moveToPage باید عنوان ماژول یا شمارهٔ صفحه‌ای باشد."
+
+#: ../firstboot/interface.py:479
+msgid "Unable to create the screenshot dir; skipping."
+msgstr "قادر به ایجاد پوشه screenshot نیست، در حال رد کردن."
+
+#: ../firstboot/interface.py:519 ../firstboot/interface.py:520
+#, python-format
+msgid "No module exists with the title %s."
+msgstr "هیچ ماژولی با عنوان %s وجود ندارد."
+
+#: ../firstboot/pwcheck.py:46
+msgid "Very weak"
+msgstr "بسیار ضعیف"
+
+#: ../firstboot/pwcheck.py:47
+msgid "Weak"
+msgstr "ضعیف"
+
+#: ../firstboot/pwcheck.py:48
+msgid "Fairly strong"
+msgstr "کمی قوی"
+
+#: ../firstboot/pwcheck.py:49
+msgid "Strong"
+msgstr "قوی"
+
+#: ../firstboot/pwcheck.py:50
+msgid "Very strong"
+msgstr "بسیار قوی"

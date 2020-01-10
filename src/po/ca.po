@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Dimitris Glezos <glezos@indifex.com>, 2011
+# Oscar Osta <oostap.listas@gmail.com>, 2011
+# Xavier Conde Rueda <xavi.conde@gmail.com>, 2003-2007
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2015. #zanata
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-19 16:43+0100\n"
+"PO-Revision-Date: 2016-03-03 04:35-0500\n"
+"Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
+"Language-Team: Catalan (http://www.transifex.com/projects/p/fedora/language/ca/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.8.4\n"
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:31
+msgid "Firstboot startup disabled in /etc/sysconfig/firstboot, exiting."
+msgstr ""
+"L'inici de firstboot està inhabilitat a /etc/sysconfig/firstboot i se surt."
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:36
+msgid "You must be root to run firstboot."
+msgstr "Heu de ser root per a executar firstboot."
+
+#: ../progs/firstboot:108
+msgid "only root can do this"
+msgstr "únicament root pot fer això"
+
+#: ../firstboot/moduleset.py:92
+#, python-format
+msgid "Module %s did not set up its UI; removing."
+msgstr ""
+"El mòdul %s no va configurar la seva interfície d'usuari; s'està eliminant."
+
+#: ../firstboot/interface.py:82
+msgid "Attempted to go back, but history is empty."
+msgstr "S'ha intentat de tornar enrere, però l'historial està buit."
+
+#. If we were previously on the last page, we need to set the Next
+#. button's label back to normal.
+#: ../firstboot/interface.py:90 ../firstboot/interface.py:160
+#: ../firstboot/interface.py:172
+msgid "_Done"
+msgstr "_Fet"
+
+#: ../firstboot/interface.py:195
+msgid "The system must now reboot for some of your selections to take effect."
+msgstr ""
+"Per tal que algunes de les vostres seleccions tinguin efecte, el sistema ha "
+"de reiniciar-se ara."
+
+#: ../firstboot/interface.py:271
+msgid "_Back"
+msgstr "_Anterior"
+
+#: ../firstboot/interface.py:278
+msgid "_Forward"
+msgstr "_Endavant"
+
+#: ../firstboot/interface.py:306
+#, python-format
+msgid "Module %s raised an exception while loading: %s"
+msgstr "El mòdul %s va llançar una excepció mentre es carregava: %s"
+
+#: ../firstboot/interface.py:310
+#, python-format
+msgid "Module %s did not set up its UI properly."
+msgstr "El mòdul %s no va preparar correctament la seva interficie gràfica."
+
+#: ../firstboot/interface.py:316
+#, python-format
+msgid "Module %s raised an exception while rendering: %s"
+msgstr "El mòdul %s va llançar una excepció mentre es preparava: %s"
+
+#: ../firstboot/interface.py:375
+#, python-format
+msgid "Module %s did not setup its UI properly"
+msgstr "El mòdul %s no va configurar correctament la seva interficie gràfica"
+
+#: ../firstboot/interface.py:390 ../firstboot/interface.py:391
+msgid "moveToPage must be given a module title or page number."
+msgstr "S'ha de donar un títol de mòdul o un número de pàgina a moveToPage."
+
+#: ../firstboot/interface.py:479
+msgid "Unable to create the screenshot dir; skipping."
+msgstr "No s'ha pogut crear un directori d'instantànies; S'està ometent."
+
+#: ../firstboot/interface.py:519 ../firstboot/interface.py:520
+#, python-format
+msgid "No module exists with the title %s."
+msgstr "No existeix cap mòdul amb el títol %s."
+
+#: ../firstboot/pwcheck.py:46
+msgid "Very weak"
+msgstr "Molt dèbil"
+
+#: ../firstboot/pwcheck.py:47
+msgid "Weak"
+msgstr "Dèbil"
+
+#: ../firstboot/pwcheck.py:48
+msgid "Fairly strong"
+msgstr "Bastant fort"
+
+#: ../firstboot/pwcheck.py:49
+msgid "Strong"
+msgstr "Fort"
+
+#: ../firstboot/pwcheck.py:50
+msgid "Very strong"
+msgstr "Molt Fort"

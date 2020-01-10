@@ -1,0 +1,126 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Dimitris Glezos <glezos@transifex.com>, 2011
+# Francesco Tombolini <tombo@adamantio.net>, 2005, 2006, 2007, 2008, 2009
+# fvalen <fvalen@redhat.com>, 2003, 2004
+# fvalen <fvalen@redhat.com>, 2014
+# fvalen <fvalen@redhat.com>, 2012
+# Gianluca Busiello <busiello@ceinge.unina.it>, 2008
+# lewis41 <>, 2011
+# Lorenzo Stobbione <lorenzo.stobbione@clsengineering.it>, 2004
+# Silvio Pierro <perplesso82@gmail.com>, 2011, 2012
+# Terry Chuang <tchuang@redhat.com>, 2016. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-19 16:43+0100\n"
+"PO-Revision-Date: 2014-02-27 11:02-0500\n"
+"Last-Translator: fvalen <fvalen@redhat.com>\n"
+"Language-Team: Italian (http://www.transifex.com/projects/p/fedora/language/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.8.4\n"
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:31
+msgid "Firstboot startup disabled in /etc/sysconfig/firstboot, exiting."
+msgstr ""
+"Avvio firstboot disabilitato su /etc/sysconfig/firstboot, uscita in corso."
+
+#: ../progs/0001-Check-if-firstboot-is-disabled-even-if-firstboot-is-.patch:36
+msgid "You must be root to run firstboot."
+msgstr "Per eseguire firstboot, è necessario essere un utente root."
+
+#: ../progs/firstboot:108
+msgid "only root can do this"
+msgstr "solo gli utenti root possono fare questo"
+
+#: ../firstboot/moduleset.py:92
+#, python-format
+msgid "Module %s did not set up its UI; removing."
+msgstr "Il modulo %s non ha settato la sua interfaccia utente; verrà rimosso."
+
+#: ../firstboot/interface.py:82
+msgid "Attempted to go back, but history is empty."
+msgstr "Si è tentato di tornare indietro, ma lo storico risulta vuoto."
+
+#. If we were previously on the last page, we need to set the Next
+#. button's label back to normal.
+#: ../firstboot/interface.py:90 ../firstboot/interface.py:160
+#: ../firstboot/interface.py:172
+msgid "_Done"
+msgstr "_Fatto"
+
+#: ../firstboot/interface.py:195
+msgid "The system must now reboot for some of your selections to take effect."
+msgstr ""
+"Il sistema deve essere ora riavviato per rendere effettive alcune delle "
+"scelte."
+
+#: ../firstboot/interface.py:271
+msgid "_Back"
+msgstr "_Indietro"
+
+#: ../firstboot/interface.py:278
+msgid "_Forward"
+msgstr "_Avanti"
+
+#: ../firstboot/interface.py:306
+#, python-format
+msgid "Module %s raised an exception while loading: %s"
+msgstr "Il modulo %s ha sollevato una eccezione durante il caricamento: %s"
+
+#: ../firstboot/interface.py:310
+#, python-format
+msgid "Module %s did not set up its UI properly."
+msgstr "Il modulo %s non ha impostato La propria UI in maniera corretta."
+
+#: ../firstboot/interface.py:316
+#, python-format
+msgid "Module %s raised an exception while rendering: %s"
+msgstr "Il modulo %s ha sollevato una eccezione durante il rendering: %s"
+
+#: ../firstboot/interface.py:375
+#, python-format
+msgid "Module %s did not setup its UI properly"
+msgstr "Il modulo %s non ha impostato correttamente la propria UI"
+
+#: ../firstboot/interface.py:390 ../firstboot/interface.py:391
+msgid "moveToPage must be given a module title or page number."
+msgstr "E' necessario assegnare un titolo di modulo o un numero di pagina."
+
+#: ../firstboot/interface.py:479
+msgid "Unable to create the screenshot dir; skipping."
+msgstr ""
+"Impossibile creare la directory per lo screenshot; operazione saltata."
+
+#: ../firstboot/interface.py:519 ../firstboot/interface.py:520
+#, python-format
+msgid "No module exists with the title %s."
+msgstr "Nessun modulo esistente con il titolo %s."
+
+#: ../firstboot/pwcheck.py:46
+msgid "Very weak"
+msgstr "Molto debole"
+
+#: ../firstboot/pwcheck.py:47
+msgid "Weak"
+msgstr "Debole"
+
+#: ../firstboot/pwcheck.py:48
+msgid "Fairly strong"
+msgstr "Abbastanza forte"
+
+#: ../firstboot/pwcheck.py:49
+msgid "Strong"
+msgstr "Forte"
+
+#: ../firstboot/pwcheck.py:50
+msgid "Very strong"
+msgstr "Molto forte"

@@ -1,4 +1,4 @@
-include Makefile firstboot.spec README.txt
+include Makefile firstboot.spec
 recursive-include init firstboot
 recursive-include po *.po *.pot Makefile
 recursive-include progs firstboot

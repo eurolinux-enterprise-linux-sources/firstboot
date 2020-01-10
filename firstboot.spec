@@ -3,8 +3,8 @@
 Summary: Initial system configuration utility
 Name: firstboot
 URL: http://fedoraproject.org/wiki/FirstBoot
-Version: 19.12
-Release: 1%{?dist}
+Version: 19.4
+Release: 2%{?dist}
 # This is a Red Hat maintained package which is specific to
 # our distribution.  Thus the source is only available from
 # within this srpm.
@@ -13,6 +13,7 @@ Source0: %{name}-%{version}.tar.bz2
 License: GPLv2+
 Group: System Environment/Base
 ExclusiveOS: Linux
+BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: gettext
 BuildRequires: python-devel, python-setuptools-devel
@@ -24,7 +25,6 @@ Requires(preun): systemd-units
 Requires(postun): systemd-units
 Requires: firstboot(windowmanager)
 Requires: libreport-python
-Requires: python-ethtool
 
 %define debug_package %{nil}
 
@@ -75,7 +75,6 @@ fi
 
 %files -f %{name}.lang
 %defattr(-,root,root,-)
-%doc README.txt
 %dir %{_datadir}/firstboot/
 %dir %{_datadir}/firstboot/modules/
 %dir %{_datadir}/firstboot/themes/
@@ -92,86 +91,6 @@ fi
 
 
 %changelog
-* Fri Jun 17 2016 Martin Kolman <mkolman@redhat.com> 19.12-1
-- Update the po files (#1273359) (mkolman@redhat.com)
-  Related: rhbz#1273359
-
-* Fri Apr 15 2016 Martin Kolman <mkolman@redhat.com> 19.11-1
-- Update the po & pot files (#1273359) (mkolman@redhat.com)
-  Related: rhbz#1273359
-
-* Mon Feb 08 2016 Martin Kolman <mkolman@redhat.com> 19.10-1
-- Switch from Transifex to Zanata (#1273359) (mkolman@redhat.com)
-  Related: rhbz#1273359
-- Update translations (#1273359) (mkolman@redhat.com)
-  Resolves: rhbz#1273359
-
-* Wed Jun 17 2015 Martin Kolman <mkolman@redhat.com> 19.9-10
-- Make sure the README file is properly installed (#1194155) (mkolman)
-  Resolves: rhbz#1194155
-
-* Wed Jun 17 2015 Martin Kolman <mkolman@redhat.com> 19.9-9
-- Add a README (#1194155) (mkolman)
-  Resolves: rhbz#1194155
-
-* Tue Jan 13 2015 Martin Kolman <mkolman@redhat.com> 19.9-8
-- Fix the Firstboot startup scripts for the s390 (#1180616) (jstodola)
-  Resolves: rhbz#1180616
-
-* Thu Dec 18 2014 Martin Kolman <mkolman@redhat.com> 19.9-7
-- Fix exception handler (#952633) (mkolman@redhat.com)
-  Related: rhbz#952633
-
-* Tue Nov 11 2014 Martin Kolman <mkolman@redhat.com> 19.9-6
-- Make Firstboot architecture specific due to s390-only files (#1162567) (mkolman@redhat.com)
-  Resolves: rhbz#1162567
-
-* Tue Sep 30 2014 Martin Kolman <mkolman@redhat.com> 19.9-5
-- Use smaller title text size so that it fits on the screen (#1040583)
-  Resolves: rhbz#1040583
-
-* Tue Sep 30 2014 Martin Kolman <mkolman@redhat.com> 19.9-4
-- Handle next button naming also if there is only one module (#1107887) (mkolman@redhat.com)
-  Related: rhbz#1107887
-
-* Mon Sep 29 2014 Martin Kolman <mkolman@redhat.com> 19.9-3
-- Fix exception handling (#952633) (mkolman@redhat.com)
-  Resolves: rhbz#952633
-- Replace Finish with Done on the next button (#1107887) (mkolman@redhat.com)
-  Resolves: rhbz#1107887
-
-* Wed Sep 03 2014 Martin Kolman <mkolman@redhat.com> 19.9-2
-- Add missing python-ethtool dependency (#1116921) (mkolman@redhat.com)
-  Resolves: rhbz#1116921
-- Disable firstboot-graphical service at the end (#1091317) (vpodzime@redhat.com)
-  Resolves: rhbz#1091317
-
-* Mon Mar 03 2014 Martin Kolman <mkolman@redhat.com> 19.9-1
-- Update translations (mkolman@redhat.com)
-  Related: rhbz#1030331
-
-* Mon Feb 24 2014 Martin Kolman <mkolman@redhat.com> 19.8-1
-- Update translations (mkolman@redhat.com)
-  Resolves: rhbz#1030331
-
-* Tue Feb 11 2014 Vratislav Podzimek <vpodzime@redhat.com> 19.7-1
-- Update translations (vpodzime@redhat.com)
-  Resolves: rhbz#1030331
-
-* Tue Jan 21 2014 Vratislav Podzimek <vpodzime@redhat.com> 19.6-1
-- Exit the main process correctly even if reboot is required (vpodzime)
-  Resolves: rhbz#903579
-  Resolves: rhbz#1042666
-- Translate the error message if not run as root (vpodzime)
-  Related: rhbz#1044339
-
-* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 19.5-2
-- Mass rebuild 2013-12-27
-
-* Mon Dec 09 2013 Vratislav Podzimek <vpodzime@redhat.com> 19.5-1
-- Fix missing Loader._needs_network call (alikins)
-  Resolves: rhbz#1033696
-
 * Thu Nov 07 2013 Vratislav Podzimek <vpodzime@redhat.com> 19.4-2
 - Don't panic if there are no modules found (vpodzime)
   Resolves: rhbz#1026941

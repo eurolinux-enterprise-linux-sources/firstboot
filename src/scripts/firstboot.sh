@@ -15,9 +15,7 @@ if [ -f $FIRSTBOOT_EXEC ] && [ "${RUN_FIRSTBOOT,,}" = "yes" ]; then
             args="--reconfig"
         fi
 
-        . /etc/locale.conf
-        . /etc/vconsole.conf
-        # run firstboot only if $DISPLAY is set
-        [ -n "$DISPLAY" ] && $FIRSTBOOT_EXEC $args
+        . /etc/sysconfig/i18n
+        $FIRSTBOOT_EXEC $args
     fi
 fi

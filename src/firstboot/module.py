@@ -166,7 +166,7 @@ class Module:
         # Create the large label that goes at the top of the right side.
         label = gtk.Label("")
         label.set_alignment(0.0, 0.5)
-        label.set_markup("<span foreground='#000000' size='20000' font_family='Helvetica'><b>%s</b></span>" % _(self.title))
+        label.set_markup("<span foreground='#000000' size='30000' font_family='Helvetica'><b>%s</b></span>" % _(self.title))
 
         titleBox = gtk.HBox()
 

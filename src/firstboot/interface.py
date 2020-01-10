@@ -28,9 +28,6 @@ from firstboot.moduleset import *
 import gettext
 _ = lambda x: gettext.ldgettext("firstboot", x)
 
-# flag telling if reboot is required or not when done
-reboot_required = False
-
 class Control:
     def __init__(self):
         self.currentPage = 0
@@ -87,7 +84,7 @@ class Interface(object):
 
         # If we were previously on the last page, we need to set the Next
         # button's label back to normal.
-        if self.nextButton.get_label() == _("_Done"):
+        if self.nextButton.get_label() == _("_Finish"):
             self.nextButton.set_label("gtk-go-forward")
 
         self._control.currentPage = self._control.history.pop()
@@ -150,14 +147,8 @@ class Interface(object):
         # interface which will know the proper way to handle it.
         result = module.apply(self, self.testing)
 
-        # If something went wrong in the module, don't advance,
-        # but check if the next button should be renamed as
-        # returning failure seems to be an indication of switching
-        # to next page in multi-page modules
+        # If something went wrong in the module, don't advance.
         if result == RESULT_FAILURE:
-            if len(self._controlStack) == 1:
-                if self._control.currentPage == len(self.moduleList) - 1:
-                    self.nextButton.set_label(_("_Done"))
             return
 
         # If the apply action from the current page jumped us to another page,
@@ -169,7 +160,7 @@ class Interface(object):
             # ModuleSet), it's time to kill the interface.
             if len(self._controlStack) == 1:
                 if self._control.currentPage == len(self.moduleList)-1:
-                    self.nextButton.set_label(_("_Done"))
+                    self.nextButton.set_label(_("_Finish"))
                 elif self._control.currentPage == len(self.moduleList):
                     self.checkReboot()
                     self.destroy()
@@ -179,8 +170,6 @@ class Interface(object):
            effect, displaying a dialog if so.  This method immediately reboots
            the system.
         """
-
-        global reboot_required
         needReboot = False
 
         for module in self.moduleList:
@@ -197,10 +186,7 @@ class Interface(object):
         dlg.show_all()
         dlg.run()
         dlg.destroy()
-
-        # set the reboot flag and terminate the Gtk main loop
-        reboot_required = True
-        gtk.main_quit()
+        os.system("/sbin/reboot")
 
     def fit_window_to_screen(self):
         # need this to get the monitor
@@ -461,14 +447,10 @@ class Interface(object):
            method does not exit until the UI is unloaded.  From this point on,
            all interaction must take place in callbacks.
         """
-
         self.displayModule()
         self.win.present()
         self.nextButton.grab_focus()
         gtk.main()
-
-        # a global flag (see self.checkReboot)
-        return reboot_required
 
     def takeScreenshot(self):
         """Take a screenshot."""

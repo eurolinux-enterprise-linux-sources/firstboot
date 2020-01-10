@@ -27,8 +27,6 @@ import sys
 import tempfile
 import traceback
 
-from collections import namedtuple
-
 import firstboot.frontend
 import firstboot.loader
 
@@ -55,11 +53,7 @@ def exception_handler(type, value, tb, obj):
     meh_conf = meh.Config(programName='firstboot',
                               programVersion='@VERSION@')
 
-    # python-meh expects the exception data in a named tuple
-    ExcInfo = namedtuple("ExcInfo", ["type", "value", "stack"])
-    exc_info = ExcInfo(type, value, tb)
-
-    dump_obj = meh.dump.ReverseExceptionDump(exc_info, meh_conf)
+    dump_obj = meh.dump.ExceptionDump((type, value, tb), meh_conf)
     exn_dump = dump_obj.traceback_and_object_dump(obj)
 
     fd, path = tempfile.mkstemp(prefix='firstboot-tb-')
@@ -71,17 +65,6 @@ def exception_handler(type, value, tb, obj):
     import report
     params = dict()
     params.update(dump_obj.environment_info)
-
-    # turn the python-meh package info to a key/value pairs
-    pkg_info = params.pop("pkg_info", None)
-    if pkg_info:
-        params["pkg_name"] = pkg_info.name
-        params["pkg_version"] = pkg_info.version
-        params["pkg_release"] = pkg_info.release
-        params["pkg_epoch"] = pkg_info.epoch
-        params["pkg_arch"] = pkg_info.arch
-        params["package"] = "%s-%s-%s.%s" % (pkg_info.name, pkg_info.version,
-                                         pkg_info.release, pkg_info.arch)
 
     params.setdefault('component', 'firstboot')
     params.setdefault('package', 'firstboot-@VERSION@')
@@ -97,6 +80,15 @@ def exception_handler(type, value, tb, obj):
 
     problem_data.create_dump_dir(ABRT_DIR)
 
+    print _('Unhandled exception in firstboot occured.')
+    print _('Bugreport directory was created and once you login, ABRT should\n'
+            'let you file a bug. (Don\'t forget to check "Show all problems")')
+    answer = raw_input (_('Do you want to start /usr/bin/setup so that you can\n'
+                          'create your user account? [Y/n] '))
+
+    if not answer.lower() in [_('n'), _('no')]:
+        os.system('/usr/bin/setup')
+
 
 if __name__ == '__main__':
     # set up exception handling first
@@ -105,7 +97,7 @@ if __name__ == '__main__':
 
     # only root can do this
     if not os.geteuid() == 0:
-        print >> sys.stderr, _('only root can do this')
+        print >> sys.stderr, 'only root can do this'
         sys.exit(1)
 
     parser = optparse.OptionParser()
@@ -127,10 +119,6 @@ if __name__ == '__main__':
                 if line.strip() == 'RUN_FIRSTBOOT=NO':
                     os.system('systemctl stop firstboot-graphical.service > /dev/null 2>&1')
                     os.system('systemctl stop firstboot-text.service > /dev/null 2>&1')
-
-                    # disable the service so that it doesn't run on every boot just to find
-                    # out it should kill itself
-                    os.system("systemctl disable firstboot-graphical.service")
                     sys.exit(0)
 
     if not opts.module_dir:
@@ -168,14 +156,13 @@ if __name__ == '__main__':
     modules = loader.load_modules(module_dir=opts.module_dir,
                                   reconfig=opts.reconfig)
 
-    reboot_required = False
     if modules:
         # TODO rewrite the interface
         config.interface.moduleList = modules
         config.interface.createMainWindow()
         config.interface.createScreens()
         config.interface.createSidebar()
-        reboot_required = config.interface.run()
+        config.interface.run()
 
     if frontend is not None:
         frontend.kill()
@@ -189,10 +176,3 @@ if __name__ == '__main__':
                 os.unlink('/etc/reconfigSys')
             except OSError:
                 pass
-
-        # disable the service so that it doesn't run on every boot just to find
-        # out it should kill itself
-        os.system("systemctl disable firstboot-graphical.service")
-
-    if reboot_required:
-        os.system("/sbin/reboot")

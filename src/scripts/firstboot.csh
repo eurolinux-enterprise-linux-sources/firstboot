@@ -14,9 +14,6 @@ if (( $? != 0 ) && ( -x $FIRSTBOOT_EXEC )) then
             set args = "--reconfig"
         endif
 
-        # run firstboot only if $DISPLAY is set
-        if ( $?DISPLAY == 1 ) then
-            $FIRSTBOOT_EXEC $args
-        endif
+        $FIRSTBOOT_EXEC $args
     endif
 endif

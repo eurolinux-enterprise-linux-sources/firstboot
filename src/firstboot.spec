@@ -3,8 +3,8 @@
 Summary: Initial system configuration utility
 Name: firstboot
 URL: http://fedoraproject.org/wiki/FirstBoot
-Version: 19.12
-Release: 1%{?dist}
+Version: 19.4
+Release: 2%{?dist}
 # This is a Red Hat maintained package which is specific to
 # our distribution.  Thus the source is only available from
 # within this srpm.
@@ -13,6 +13,7 @@ Source0: %{name}-%{version}.tar.bz2
 License: GPLv2+
 Group: System Environment/Base
 ExclusiveOS: Linux
+BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: gettext
 BuildRequires: python-devel, python-setuptools-devel
@@ -24,7 +25,6 @@ Requires(preun): systemd-units
 Requires(postun): systemd-units
 Requires: firstboot(windowmanager)
 Requires: libreport-python
-Requires: python-ethtool
 
 %define debug_package %{nil}
 
@@ -74,7 +74,6 @@ fi
 /bin/systemctl try-restart firstboot-graphical.service > /dev/null 2>&1 || :
 
 %files -f %{name}.lang
-%doc README.txt
 %defattr(-,root,root,-)
 %dir %{_datadir}/firstboot/
 %dir %{_datadir}/firstboot/modules/
@@ -92,51 +91,6 @@ fi
 
 
 %changelog
-* Fri Jun 17 2016 Martin Kolman <mkolman@redhat.com> 19.12-1
-- Update the po files (#1273359) (mkolman@redhat.com)
-
-* Fri Apr 15 2016 Martin Kolman <mkolman@redhat.com> 19.11-1
-- Update the po & pot files (#1273359) (mkolman@redhat.com)
-
-* Mon Feb 08 2016 Martin Kolman <mkolman@redhat.com> 19.10-1
-- Switch from Transifex to Zanata (#1273359) (mkolman@redhat.com)
-- Update translations (#1273359) (mkolman@redhat.com)
-- Add a README (#1194155) (mkolman@redhat.com)
-- Fix the Firstboot startup scripts for the s390 (#1180616)
-  (mkolman@redhat.com)
-- Fix exception handler (#952633) (mkolman@redhat.com)
-- Mark Firstboot as an architecture specific package (#1162567)
-  (mkolman@redhat.com)
-- Handle next button naming also if there is only one module (#1107887)
-  (mkolman@redhat.com)
-- Replace Finish with Done on the next button (#1107887) (mkolman@redhat.com)
-- Fix exception handling (#952633) (mkolman@redhat.com)
-- Use smaller title text size so that it fits on the screen (#1040583)
-  (mkolman@redhat.com)
-- Disable firstboot-graphical service at the end (#1091317)
-  (vpodzime@redhat.com)
-- Add missing python-ethtool dependency (#1116921) (mkolman@redhat.com)
-
-* Mon Mar 03 2014 Martin Kolman <mkolman@redhat.com> 19.9-1
-- Update translations (#1030331) (mkolman@redhat.com)
-
-* Mon Feb 24 2014 Martin Kolman <mkolman@redhat.com> 19.8-1
-- Update translations (#1030331) (mkolman@redhat.com)
-
-* Tue Feb 11 2014 Vratislav Podzimek <vpodzime@redhat.com> 19.7-1
-- Update translations (vpodzime@redhat.com)
-  Resolves: rhbz#1030331
-
-* Tue Jan 21 2014 Vratislav Podzimek <vpodzime@redhat.com> 19.6-1
-- Exit the main process correctly even if reboot is required (vpodzime)
-  Resolves: rhbz#903579
-  Resolves: rhbz#1042666
-- Translate the error message if not run as root (vpodzime)
-  Related: rhbz#1044339
-
-* Mon Dec 09 2013 Vratislav Podzimek <vpodzime@redhat.com> 19.5-1
-- Fix missing Loader._needs_network call (#1033696) (alikins@redhat.com)
-
 * Thu Nov 07 2013 Vratislav Podzimek <vpodzime@redhat.com> 19.4-2
 - Don't panic if there are no modules found (#1026941) (vpodzime)
 

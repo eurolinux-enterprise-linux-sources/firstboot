@@ -4,16 +4,32 @@ Summary: Initial system configuration utility
 Name: firstboot
 URL: http://fedoraproject.org/wiki/FirstBoot
 Version: 19.9
-Release: 1%{?dist}
+Release: 10%{?dist}
 # This is a Red Hat maintained package which is specific to
 # our distribution.  Thus the source is only available from
 # within this srpm.
 Source0: %{name}-%{version}.tar.bz2
 
+# disable the systemd service once Firstboot is done
+Patch1: 0001-Disable-firstboot-graphical-service-at-the-end-10913.patch
+# fix exception handling
+Patch2: 0002-Fix-exception-handling-952633.patch
+# use "Done" instead of "Forward" of "Finish" on last module
+Patch3: 0003-Replace-Finish-with-Done-on-the-next-button-1107887.patch
+# correctly change the next-button label even for on multi-page module
+Patch4: 0004-Handle-next-button-naming-also-if-there-is-only-one-.patch
+# use smaller title text size so that it fits on the screen
+Patch5: 0005-Use-smaller-title-text-size-so-that-it-fits-on-the-s.patch
+# fix exception handler by adding a missing import
+Patch6: 0006-Fix-exception-handler-952633.patch
+# fix startup scripts for the s390
+Patch7: 0007-Fix-the-Firstboot-startup-scripts-for-the-s390-11806.patch
+# add a README
+Patch8: 0008-Add-a-README-1194155.patch
+
 License: GPLv2+
 Group: System Environment/Base
 ExclusiveOS: Linux
-BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: gettext
 BuildRequires: python-devel, python-setuptools-devel
@@ -25,6 +41,7 @@ Requires(preun): systemd-units
 Requires(postun): systemd-units
 Requires: firstboot(windowmanager)
 Requires: libreport-python
+Requires: python-ethtool
 
 %define debug_package %{nil}
 
@@ -36,6 +53,16 @@ a series of steps that allows for easier configuration of the machine.
 
 %prep
 %setup -q
+
+# apply patches
+%patch1 -p1
+%patch2 -p1
+%patch3 -p1
+%patch4 -p1
+%patch5 -p1
+%patch6 -p1
+%patch7 -p1
+%patch8 -p1
 
 %build
 
@@ -75,6 +102,7 @@ fi
 
 %files -f %{name}.lang
 %defattr(-,root,root,-)
+%doc README.txt
 %dir %{_datadir}/firstboot/
 %dir %{_datadir}/firstboot/modules/
 %dir %{_datadir}/firstboot/themes/
@@ -91,6 +119,46 @@ fi
 
 
 %changelog
+* Wed Jun 17 2015 Martin Kolman <mkolman@redhat.com> 19.9-10
+- Make sure the README file is properly installed (#1194155) (mkolman)
+  Resolves: rhbz#1194155
+
+* Wed Jun 17 2015 Martin Kolman <mkolman@redhat.com> 19.9-9
+- Add a README (#1194155) (mkolman)
+  Resolves: rhbz#1194155
+
+* Tue Jan 13 2015 Martin Kolman <mkolman@redhat.com> 19.9-8
+- Fix the Firstboot startup scripts for the s390 (#1180616) (jstodola)
+  Resolves: rhbz#1180616
+
+* Thu Dec 18 2014 Martin Kolman <mkolman@redhat.com> 19.9-7
+- Fix exception handler (#952633) (mkolman@redhat.com)
+  Related: rhbz#952633
+
+* Tue Nov 11 2014 Martin Kolman <mkolman@redhat.com> 19.9-6
+- Make Firstboot architecture specific due to s390-only files (#1162567) (mkolman@redhat.com)
+  Resolves: rhbz#1162567
+
+* Tue Sep 30 2014 Martin Kolman <mkolman@redhat.com> 19.9-5
+- Use smaller title text size so that it fits on the screen (#1040583)
+  Resolves: rhbz#1040583
+
+* Tue Sep 30 2014 Martin Kolman <mkolman@redhat.com> 19.9-4
+- Handle next button naming also if there is only one module (#1107887) (mkolman@redhat.com)
+  Related: rhbz#1107887
+
+* Mon Sep 29 2014 Martin Kolman <mkolman@redhat.com> 19.9-3
+- Fix exception handling (#952633) (mkolman@redhat.com)
+  Resolves: rhbz#952633
+- Replace Finish with Done on the next button (#1107887) (mkolman@redhat.com)
+  Resolves: rhbz#1107887
+
+* Wed Sep 03 2014 Martin Kolman <mkolman@redhat.com> 19.9-2
+- Add missing python-ethtool dependency (#1116921) (mkolman@redhat.com)
+  Resolves: rhbz#1116921
+- Disable firstboot-graphical service at the end (#1091317) (vpodzime@redhat.com)
+  Resolves: rhbz#1091317
+
 * Mon Mar 03 2014 Martin Kolman <mkolman@redhat.com> 19.9-1
 - Update translations (mkolman@redhat.com)
   Related: rhbz#1030331

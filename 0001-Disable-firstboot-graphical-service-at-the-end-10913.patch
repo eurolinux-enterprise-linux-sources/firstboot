@@ -1,0 +1,42 @@
+From 58abb4d88f2166e77f71fe1e6b59aaaafae8ca82 Mon Sep 17 00:00:00 2001
+From: Vratislav Podzimek <vpodzime@redhat.com>
+Date: Fri, 25 Apr 2014 12:47:47 +0200
+Subject: Disable firstboot-graphical service at the end (#1091317)
+
+There's no point in running the service again and again on every single boot
+for it only to find out it shouldn't actually run.
+
+Signed-off-by: Vratislav Podzimek <vpodzime@redhat.com>
+Signed-off-by: Martin Kolman <mkolman@redhat.com>
+---
+ progs/firstboot | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/progs/firstboot b/progs/firstboot
+index 3d9c5e9..ba57ca6 100755
+--- a/progs/firstboot
++++ b/progs/firstboot
+@@ -119,6 +119,10 @@ if __name__ == '__main__':
+                 if line.strip() == 'RUN_FIRSTBOOT=NO':
+                     os.system('systemctl stop firstboot-graphical.service > /dev/null 2>&1')
+                     os.system('systemctl stop firstboot-text.service > /dev/null 2>&1')
++
++                    # disable the service so that it doesn't run on every boot just to find
++                    # out it should kill itself
++                    os.system("systemctl disable firstboot-graphical.service")
+                     sys.exit(0)
+ 
+     if not opts.module_dir:
+@@ -178,5 +182,9 @@ if __name__ == '__main__':
+             except OSError:
+                 pass
+ 
++        # disable the service so that it doesn't run on every boot just to find
++        # out it should kill itself
++        os.system("systemctl disable firstboot-graphical.service")
++
+     if reboot_required:
+         os.system("/sbin/reboot")
+-- 
+1.9.3
+

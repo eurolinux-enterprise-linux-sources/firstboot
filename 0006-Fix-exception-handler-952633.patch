@@ -1,0 +1,30 @@
+From 42b755d222f75fcedddfd1a7373783c3d1f2c7c9 Mon Sep 17 00:00:00 2001
+From: Martin Kolman <mkolman@redhat.com>
+Date: Wed, 17 Dec 2014 17:13:53 +0100
+Subject: [PATCH] Fix exception handler (#952633)
+
+A missing namedtuple import was preventing the exception handler from
+working correctly.
+
+Related: rhbz#952633
+Signed-off-by: Martin Kolman <mkolman@redhat.com>
+---
+ progs/firstboot | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/progs/firstboot b/progs/firstboot
+index f690a86..8e45f25 100755
+--- a/progs/firstboot
++++ b/progs/firstboot
+@@ -27,6 +27,8 @@ import sys
+ import tempfile
+ import traceback
+ 
++from collections import namedtuple
++
+ import firstboot.frontend
+ import firstboot.loader
+ 
+-- 
+1.9.3
+

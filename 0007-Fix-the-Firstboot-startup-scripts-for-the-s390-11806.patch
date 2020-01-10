@@ -1,0 +1,52 @@
+From ea6edcfa5cb9a6a4dd5739f2238a051097f82a65 Mon Sep 17 00:00:00 2001
+From: Martin Kolman <mkolman@redhat.com>
+Date: Fri, 9 Jan 2015 18:06:36 +0100
+Subject: [PATCH] Fix the Firstboot startup scripts for the s390 (#1180616)
+
+Drop usage of /etc/sysconfig/i18n, which has been removed in RHEL-7
+and only launch Firstboot if $DESKTOP is set.
+
+Patch by jstodola.
+
+Resolves rhbz#1180616
+
+Signed-off-by: Martin Kolman <mkolman@redhat.com>
+---
+ scripts/firstboot.csh | 5 ++++-
+ scripts/firstboot.sh  | 6 ++++--
+ 2 files changed, 8 insertions(+), 3 deletions(-)
+
+diff --git a/scripts/firstboot.csh b/scripts/firstboot.csh
+index 07a4ab7..a4ff699 100644
+--- a/scripts/firstboot.csh
++++ b/scripts/firstboot.csh
+@@ -14,6 +14,9 @@ if (( $? != 0 ) && ( -x $FIRSTBOOT_EXEC )) then
+             set args = "--reconfig"
+         endif
+ 
+-        $FIRSTBOOT_EXEC $args
++        # run firstboot only if $DISPLAY is set
++        if ( $?DISPLAY == 1 ) then
++            $FIRSTBOOT_EXEC $args
++        endif
+     endif
+ endif
+diff --git a/scripts/firstboot.sh b/scripts/firstboot.sh
+index 5b4ec9d..dc4f0ef 100644
+--- a/scripts/firstboot.sh
++++ b/scripts/firstboot.sh
+@@ -15,7 +15,9 @@ if [ -f $FIRSTBOOT_EXEC ] && [ "${RUN_FIRSTBOOT,,}" = "yes" ]; then
+             args="--reconfig"
+         fi
+ 
+-        . /etc/sysconfig/i18n
+-        $FIRSTBOOT_EXEC $args
++        . /etc/locale.conf
++        . /etc/vconsole.conf
++        # run firstboot only if $DISPLAY is set
++        [ -n "$DISPLAY" ] && $FIRSTBOOT_EXEC $args
+     fi
+ fi
+-- 
+2.1.0
+

@@ -1,0 +1,68 @@
+From 12167a02350e15ecde7a156c9425c068acba7051 Mon Sep 17 00:00:00 2001
+From: Martin Kolman <mkolman@redhat.com>
+Date: Thu, 18 Sep 2014 15:57:10 +0200
+Subject: [PATCH] Fix exception handling (#952633)
+
+Provide python-meh and libreport with correctly formated data
+and dump broken interactive console error reporting.
+
+Resolves: rhbz#952633
+Signed-off-by: Martin Kolman <mkolman@redhat.com>
+---
+ progs/firstboot | 26 ++++++++++++++++----------
+ 1 file changed, 16 insertions(+), 10 deletions(-)
+
+diff --git a/progs/firstboot b/progs/firstboot
+index ba57ca6..f690a86 100755
+--- a/progs/firstboot
++++ b/progs/firstboot
+@@ -53,7 +53,11 @@ def exception_handler(type, value, tb, obj):
+     meh_conf = meh.Config(programName='firstboot',
+                               programVersion='@VERSION@')
+ 
+-    dump_obj = meh.dump.ExceptionDump((type, value, tb), meh_conf)
++    # python-meh expects the exception data in a named tuple
++    ExcInfo = namedtuple("ExcInfo", ["type", "value", "stack"])
++    exc_info = ExcInfo(type, value, tb)
++
++    dump_obj = meh.dump.ReverseExceptionDump(exc_info, meh_conf)
+     exn_dump = dump_obj.traceback_and_object_dump(obj)
+ 
+     fd, path = tempfile.mkstemp(prefix='firstboot-tb-')
+@@ -66,6 +70,17 @@ def exception_handler(type, value, tb, obj):
+     params = dict()
+     params.update(dump_obj.environment_info)
+ 
++    # turn the python-meh package info to a key/value pairs
++    pkg_info = params.pop("pkg_info", None)
++    if pkg_info:
++        params["pkg_name"] = pkg_info.name
++        params["pkg_version"] = pkg_info.version
++        params["pkg_release"] = pkg_info.release
++        params["pkg_epoch"] = pkg_info.epoch
++        params["pkg_arch"] = pkg_info.arch
++        params["package"] = "%s-%s-%s.%s" % (pkg_info.name, pkg_info.version,
++                                         pkg_info.release, pkg_info.arch)
++
+     params.setdefault('component', 'firstboot')
+     params.setdefault('package', 'firstboot-@VERSION@')
+ 
+@@ -80,15 +95,6 @@ def exception_handler(type, value, tb, obj):
+ 
+     problem_data.create_dump_dir(ABRT_DIR)
+ 
+-    print _('Unhandled exception in firstboot occured.')
+-    print _('Bugreport directory was created and once you login, ABRT should\n'
+-            'let you file a bug. (Don\'t forget to check "Show all problems")')
+-    answer = raw_input (_('Do you want to start /usr/bin/setup so that you can\n'
+-                          'create your user account? [Y/n] '))
+-
+-    if not answer.lower() in [_('n'), _('no')]:
+-        os.system('/usr/bin/setup')
+-
+ 
+ if __name__ == '__main__':
+     # set up exception handling first
+-- 
+1.9.3
+

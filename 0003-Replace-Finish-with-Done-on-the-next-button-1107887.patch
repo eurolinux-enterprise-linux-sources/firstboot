@@ -1,0 +1,57 @@
+From f8b8191dcc340e237a23580c60a72382cb68f596 Mon Sep 17 00:00:00 2001
+From: Martin Kolman <mkolman@redhat.com>
+Date: Fri, 26 Sep 2014 14:02:02 +0200
+Subject: [PATCH] Replace Finish with Done on the next button (#1107887)
+
+By default Firstboot displays the "Forward" label on the next-button
+if there are any modules following the current module.
+
+Once it reaches the last module, it currently tries to decide
+if it should show keep the "Forward" label or switch to the
+"Finish" label due to the given screen being the last.
+
+Unfortunately, some multi-page modules, such as Subscription Manager
+do not provide any feedback to Firstboot if the given page is the last page.
+ One Subscription Manager page even has a combo box that decides if the module quits
+or continues to the next page and there is no feedback provided about
+this.
+
+The lack of feedback is not an issue if such a module is not the last
+one as all the labels would just be "Forward", but if the module is the
+last one as the only one, Firstboot does not have enough information
+to decide which label to use.
+
+Given the lack of any other option, just set the next button label to
+"Done" for all pages on the last (or possibly only) Firstboot module.
+
+Resolves: rhbz#1107887
+Signed-off-by: Martin Kolman <mkolman@redhat.com>
+---
+ firstboot/interface.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/firstboot/interface.py b/firstboot/interface.py
+index 6fda66d..60d4800 100644
+--- a/firstboot/interface.py
++++ b/firstboot/interface.py
+@@ -87,7 +87,7 @@ class Interface(object):
+ 
+         # If we were previously on the last page, we need to set the Next
+         # button's label back to normal.
+-        if self.nextButton.get_label() == _("_Finish"):
++        if self.nextButton.get_label() == _("_Done"):
+             self.nextButton.set_label("gtk-go-forward")
+ 
+         self._control.currentPage = self._control.history.pop()
+@@ -163,7 +163,7 @@ class Interface(object):
+             # ModuleSet), it's time to kill the interface.
+             if len(self._controlStack) == 1:
+                 if self._control.currentPage == len(self.moduleList)-1:
+-                    self.nextButton.set_label(_("_Finish"))
++                    self.nextButton.set_label(_("_Done"))
+                 elif self._control.currentPage == len(self.moduleList):
+                     self.checkReboot()
+                     self.destroy()
+-- 
+1.9.3
+

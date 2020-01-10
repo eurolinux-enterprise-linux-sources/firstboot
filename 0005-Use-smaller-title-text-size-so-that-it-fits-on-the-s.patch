@@ -1,0 +1,31 @@
+From 0fbd9ec83a7868babae347b4e93d18135f664139 Mon Sep 17 00:00:00 2001
+From: Martin Kolman <mkolman@redhat.com>
+Date: Tue, 9 Sep 2014 14:19:23 +0200
+Subject: [PATCH] Use smaller title text size so that it fits on the screen
+ (#1040583)
+
+I've tried to use set_line_wrap(), but it introduced weird layout
+issues. Changing the text size works just as well, seems to be more
+robust and even works fine on 800x600.
+
+Resolves: rhbz#1040583
+---
+ firstboot/module.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/firstboot/module.py b/firstboot/module.py
+index 1b7fadc..6c4c918 100644
+--- a/firstboot/module.py
++++ b/firstboot/module.py
+@@ -166,7 +166,7 @@ class Module:
+         # Create the large label that goes at the top of the right side.
+         label = gtk.Label("")
+         label.set_alignment(0.0, 0.5)
+-        label.set_markup("<span foreground='#000000' size='30000' font_family='Helvetica'><b>%s</b></span>" % _(self.title))
++        label.set_markup("<span foreground='#000000' size='20000' font_family='Helvetica'><b>%s</b></span>" % _(self.title))
+ 
+         titleBox = gtk.HBox()
+ 
+-- 
+1.9.3
+

@@ -1,0 +1,43 @@
+From 6e6a398e253772c043590183d7c036d1449e0025 Mon Sep 17 00:00:00 2001
+From: Martin Kolman <mkolman@redhat.com>
+Date: Mon, 29 Sep 2014 17:01:18 +0200
+Subject: [PATCH] Handle next button naming also if there is only one module
+ (#1107887)
+
+Due to how multi-page modules work (they return FAILURE on apply() to
+prevent Firstboot from switching to the next module) the code that
+changes the next button label will be never called if there is only
+a single multi-page module in Firstboot.
+
+So check if the label change is needed even if the module returns
+FAILURE.
+
+Related: rhbz#1107887
+Signed-off-by: Martin Kolman <mkolman@redhat.com>
+---
+ firstboot/interface.py | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/firstboot/interface.py b/firstboot/interface.py
+index 60d4800..800c8bd 100644
+--- a/firstboot/interface.py
++++ b/firstboot/interface.py
+@@ -150,8 +150,14 @@ class Interface(object):
+         # interface which will know the proper way to handle it.
+         result = module.apply(self, self.testing)
+ 
+-        # If something went wrong in the module, don't advance.
++        # If something went wrong in the module, don't advance,
++        # but check if the next button should be renamed as
++        # returning failure seems to be an indication of switching
++        # to next page in multi-page modules
+         if result == RESULT_FAILURE:
++            if len(self._controlStack) == 1:
++                if self._control.currentPage == len(self.moduleList) - 1:
++                    self.nextButton.set_label(_("_Done"))
+             return
+ 
+         # If the apply action from the current page jumped us to another page,
+-- 
+1.9.3
+
